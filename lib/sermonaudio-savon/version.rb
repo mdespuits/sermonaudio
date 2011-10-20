@@ -1,5 +1,5 @@
 module Sermonaudio
-  module Savon
+  module Version
     VERSION_NUMBERS = [
       MAJOR = 0,
       MINOR = 0,

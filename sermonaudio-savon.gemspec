@@ -4,7 +4,7 @@ require "sermonaudio-savon/version"
 
 Gem::Specification.new do |s|
   s.name        = "sermonaudio-savon"
-  s.version     = Sermonaudio::Savon::VERSION
+  s.version     = Sermonaudio::Version::VERSION
   s.authors     = ["Matt Bridges"]
   s.email       = ["mbridges.91@gmail.com"]
   s.homepage    = ""
