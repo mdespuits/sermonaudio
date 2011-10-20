@@ -1,5 +1,10 @@
 module Sermonaudio
   module Savon
-    VERSION = "0.0.1"
+    VERSION_NUMBERS = [
+      MAJOR = 0,
+      MINOR = 0,
+      BUILD = 1 
+    ]
+    VERSION = VERSION_NUMBERS.join('.')
   end
 end
