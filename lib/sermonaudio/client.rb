@@ -1,5 +1,5 @@
 module Sermonaudio
-  class Configuration
+  class Client
     
     ## Require Savon library
     include ::Savon
@@ -14,6 +14,7 @@ module Sermonaudio
     def self.client      
       @@sermonaudio_savon_client ||= ::Savon::Client.new 'http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL'
     end
+    
     
   end
 end
