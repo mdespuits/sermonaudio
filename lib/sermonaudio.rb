@@ -6,6 +6,7 @@ require "savon"
 require "sermonaudio/version"
 require "sermonaudio/configuration"
 require "sermonaudio/client"
+require "sermonaudio/finder"
 require "sermonaudio/savon"
 
 module Sermonaudio; end

@@ -21,7 +21,7 @@ sermonaudio is very simple to use. Only two 'getter' methods are set: find and g
     sermonaudio.find :newest, speaker_name: "Walter Chantry"
     sermonaudio.find :series, member_id: "108111234595"
 
-    sermonaudio.get :sermon, sermon_id: "108111234595"
+    sermonaudio.get :sermons, sermon_id: "108111234595"
     sermonaudio.get :sermons, category: "category search"
 
 Both methods are very similar, but there is a very important difference. 'find' queries do not require a member id and password
