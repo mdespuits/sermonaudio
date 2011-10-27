@@ -1,8 +1,7 @@
 require 'sermonaudio/finder'
 
 module Sermonaudio
-  class Savon
-
+  class Sermon
     attr_accessor :savon
     
     def initialize
@@ -35,6 +34,5 @@ module Sermonaudio
     # def upload
     #   # upload a sermon with the given files
     # end
-    
   end
 end

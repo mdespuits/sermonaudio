@@ -16,7 +16,7 @@ Then run bundle to install it:
 
 sermonaudio is very simple to use. Only two 'getter' methods are set: find and get. Here are some examples:
 
-    sermonaudio = Sermonaudio::Savon.new
+    sermonaudio = Sermonaudio::Sermon.new
     sermonaudio.find :speakers, keyword: "sermon keywords"
     sermonaudio.find :newest, speaker_name: "Walter Chantry"
     sermonaudio.find :series, member_id: "108111234595"
