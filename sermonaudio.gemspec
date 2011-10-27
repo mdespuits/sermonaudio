@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 require "sermonaudio/version"
 
@@ -7,7 +6,7 @@ Gem::Specification.new do |s|
   s.version     = Sermonaudio::Version::VERSION
   s.authors     = ["Matt Bridges"]
   s.email       = ["mbridges.91@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/mattdbridges/sermonaudio"
   s.summary     = %q{interface the SermonAudio API easily.}
   s.description = %q{sermonaudio uses the Savon gem to interface with SermonAudio as easily as possible.}
 
@@ -19,8 +18,4 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   s.add_dependency "savon"
-
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
 end
