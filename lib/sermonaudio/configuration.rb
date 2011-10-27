@@ -1,6 +1,7 @@
 module Sermonaudio
   class Configuration
     
+    # Have a member_id and password been supplied
     def self.login_provided?
       @@member_id && @password
     end
@@ -11,8 +12,8 @@ module Sermonaudio
     
     def self.member_id
       @@member_id
-    rescue Exception => e
-      puts e.message
+    rescue
+      raise MissingConfiguration, 'You are missing your Member ID.'
     end
     
     def self.member_id=(name)
@@ -21,8 +22,8 @@ module Sermonaudio
     
     def self.password
       @@password
-    rescue Exception => e
-      puts e.message
+    rescue
+      raise MissingConfiguration, 'You are missing your Password.'
     end
     
     def self.password=(password)
