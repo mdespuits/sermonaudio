@@ -15,7 +15,7 @@ module Sermonaudio
         call = :get_newest_series_by_member_id 
       end
       response = self.request(call, opts)
-      puts response.inspect
+      # puts response.inspect
     end
 
     def self.sermons(opts = {})
