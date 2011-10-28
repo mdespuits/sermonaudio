@@ -2,6 +2,8 @@
 
 The SermonAudio gem enables church ruby developers who need easily access sermons and information right from SermonAudio without having to configure any SOAP clients.
 
+[![Build Status](https://secure.travis-ci.org/mattbridges/sermonaudio.png)](http://travis-ci.org/mattbridges/sermonaudio)
+
 ## Installation
 
 To install sermonaudio, add the following line to your Gemfile:
