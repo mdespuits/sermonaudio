@@ -6,7 +6,7 @@ require "sermonaudio/exceptions"    # For exceptions
 # Load Sermonaudio specific files
 require "sermonaudio/configuration"
 require "sermonaudio/client"
+require "sermonaudio/sermon"
 require "sermonaudio/finder"
-require "sermonaudio/savon"
 
 module Sermonaudio; end

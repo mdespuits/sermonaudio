@@ -1,15 +1,9 @@
-require 'sermonaudio/finder'
-
 module Sermonaudio
   class Sermon
     attr_accessor :savon
     
     def initialize
       @savon ||= Sermonaudio::Client.client
-    end
-    
-    def self.recent_sermons_by(name)
-      Client.client.request :ser, :newest_sermons_by_speaker, body: { "SpeakerName" => name }
     end
     
     def find(method, args = {})

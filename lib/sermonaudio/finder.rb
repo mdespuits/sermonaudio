@@ -1,5 +1,3 @@
-require 'sermonaudio/savon'
-
 module Sermonaudio
 	class Finder
 
@@ -21,17 +19,17 @@ module Sermonaudio
     end
 
     def self.sermons(opts = {})
-      # response = self.request(call, opts)
+      # response = request(call, opts)
       # puts response.inspect
     end
 
     def self.series(opts = {})
-      # response = self.request(call, opts)
+      # response = request(call, opts)
       # puts response.inspect
     end
 
     def self.speakers(opts = {})
-      # response = self.request(call, opts)
+      # response = request(call, opts)
       # puts response.inspect
     end
 
