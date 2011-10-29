@@ -4,7 +4,7 @@ module Sermonaudio
     @@client ||= Sermonaudio::Sermon.new.savon
 
     def self.request(request_name, opts = {})
-      request = @@client.request :ser, request_name, body: opts
+      request = @@client.request :ser, request_name, :body => opts
     end
 
     def self.newest(opts = {})
