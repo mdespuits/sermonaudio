@@ -4,7 +4,7 @@
 # development environment upon cd'ing into the directory
 
 # First we specify our desired <ruby>[@<gemset>], the @gemset name is optional.
-environment_id="ruby-1.9.2-p290@sermonaudio"
+environment_id="ruby-1.9.3-p0@sermonaudio"
 
 #
 # Uncomment following line if you want options to be set only for given project.
@@ -41,7 +41,15 @@ fi
 # necessary.
 #
 # filename=".gems"
-# if [[ -s "$filename" ]] ; then
+# if [[ -s "$filename" ]]
+# then
 #   rvm gemset import "$filename" | grep -v already | grep -v listed | grep -v complete | sed '/^$/d'
 # fi
+
+# If you use bundler, this might be useful to you:
+# if command -v bundle && [[ -s Gemfile ]]
+# then
+#   bundle install
+# fi
+
 
