@@ -1,4 +1,4 @@
-env: SERMONAUDIO_MEMBER_ID=example SERMONAUDIO_PASSWORD=cornerstone
+env: SERMONAUDIO_MEMBER_ID=example SERMONAUDIO_PASSWORD=example
 rvm:
   - 1.9.3
   - 2.0.0
