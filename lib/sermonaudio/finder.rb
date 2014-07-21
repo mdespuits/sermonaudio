@@ -4,7 +4,7 @@ module Sermonaudio
     @@client ||= Sermonaudio::Sermon.new.savon
 
     def self.request(request_name, opts = {})
-      request = @@client.request :ser, request_name, :body => opts
+      @@client.call request_name, message: opts
     end
 
     def self.newest(opts = {})
@@ -13,7 +13,7 @@ module Sermonaudio
       call = :newest_sermons_by_member_id if opts.has_key? "MemberID"
       if opts.has_key?(:what) && opts[:what] == "series"
         raise MissingOption, "Please provid a member id when searching for a series" unless opts.has_key? "MemberID"
-        call = :get_newest_series_by_member_id 
+        call = :get_newest_series_by_member_id
       end
       response = self.request(call, opts)
       # puts response.inspect

@@ -9,7 +9,7 @@ describe Sermonaudio::Sermon do
   end
 
   it "should have a client with the right WDSL" do
-    expect(sermons.savon.wsdl.document).to eq("http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL")
+    expect(sermons.savon.globals[:wsdl]).to eq("http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL")
   end
 
   describe "#find(:newest)" do
@@ -17,7 +17,7 @@ describe Sermonaudio::Sermon do
     context "success" do
       it "should find newest sermons by SpeakerName" do
         result = sermons.find :newest, "SpeakerName" => "Mitchell Jones"
-        expect(result).to be_a Savon::SOAP::Response
+        expect(result).to be_a Savon::Response
       end
     end
 

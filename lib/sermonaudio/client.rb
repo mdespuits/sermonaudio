@@ -10,7 +10,7 @@ module Sermonaudio
 
     ## Setup the client
     def client
-      @sermonaudio_savon_client ||= Savon::Client.new WSDL_ENDPOINT
+      @sermonaudio_savon_client ||= Savon::Client.new wsdl: WSDL_ENDPOINT
     end
 
   end
