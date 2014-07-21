@@ -1,11 +1,11 @@
 module Sermonaudio
   class Sermon
     attr_accessor :savon
-    
+
     def initialize
       @savon ||= Sermonaudio::Client.client
     end
-    
+
     def find(method, args = {})
       # make calls to the right method based on the method and the arguments
       case
@@ -19,11 +19,11 @@ module Sermonaudio
         Finder.newest(args)
       end
     end
-    
+
     def get(method, *args)
       # invoke the find method if user login configuration is provided
     end
-    
+
     # This functionality will come later
     # def upload
     #   # upload a sermon with the given files

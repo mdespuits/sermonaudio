@@ -8,5 +8,3 @@ require "sermonaudio/configuration"
 require "sermonaudio/client"
 require "sermonaudio/sermon"
 require "sermonaudio/finder"
-
-module Sermonaudio; end
