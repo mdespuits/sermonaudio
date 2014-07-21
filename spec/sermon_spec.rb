@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Sermonaudio::Sermon do
+describe SermonAudio::Sermon do
 
-  let(:sermons) { Sermonaudio::Sermon.new }
+  let(:sermons) { SermonAudio::Sermon.new }
 
   it "should create a Savon client instance" do
     expect(sermons.savon).to be_a(Savon::Client)
@@ -23,13 +23,13 @@ describe Sermonaudio::Sermon do
 
     context "failure" do
       it "should raise an error if no arguments are passed" do
-        expect { sermons.find(:newest) }.to raise_error(Sermonaudio::MissingOption)
+        expect { sermons.find(:newest) }.to raise_error(SermonAudio::MissingOption)
       end
 
       it "should raise an error if invalid arguments are passed" do
         expect {
           sermons.find(:newest, :what => "series")
-        }.to raise_error(Sermonaudio::MissingOption)
+        }.to raise_error(SermonAudio::MissingOption)
       end
     end
   end

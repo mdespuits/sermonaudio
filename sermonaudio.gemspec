@@ -3,7 +3,7 @@ require "sermonaudio/version"
 
 Gem::Specification.new do |s|
   s.name        = "sermonaudio"
-  s.version     = Sermonaudio::Version::VERSION
+  s.version     = SermonAudio::Version::VERSION
   s.authors     = ["Matt Bridges"]
   s.email       = ["mbridges.91@gmail.com"]
   s.homepage    = "https://github.com/mattdbridges/sermonaudio"

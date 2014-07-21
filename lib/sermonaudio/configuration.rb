@@ -1,4 +1,4 @@
-module Sermonaudio
+module SermonAudio
   class Configuration
 
     # Have a member_id and password been supplied

@@ -1,4 +1,4 @@
-module Sermonaudio
+module SermonAudio
   module Version
     VERSION_NUMBERS = [
       MAJOR = 0,

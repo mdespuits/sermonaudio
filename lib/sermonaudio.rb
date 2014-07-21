@@ -4,7 +4,7 @@ require "savon"                   # Everything depends on the Savon gem. Require
 
 require "sermonaudio/exceptions"    # For exceptions
 
-# Load Sermonaudio specific files
+# Load SermonAudio specific files
 require "sermonaudio/configuration"
 require "sermonaudio/client"
 require "sermonaudio/sermon"

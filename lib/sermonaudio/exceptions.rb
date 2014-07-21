@@ -1,4 +1,4 @@
-module Sermonaudio
+module SermonAudio
 
   # Extend the default StandardError class for a general error
   class Error < StandardError; end

@@ -1,9 +1,9 @@
-module Sermonaudio
+module SermonAudio
   class Sermon
     attr_accessor :savon
 
     def initialize
-      @savon ||= Sermonaudio::Client.client
+      @savon ||= SermonAudio::Client.client
     end
 
     def find(method, args = {})

@@ -1,4 +1,4 @@
-module Sermonaudio
+module SermonAudio
   ## Require Savon library
   include Savon
 
