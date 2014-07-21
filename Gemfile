@@ -5,6 +5,7 @@ source "http://rubygems.org"
 gem 'pry'
 gem 'rspec'
 gem 'rake'
+gem 'rubyntlm'
 
 # gem 'vcr'
 
