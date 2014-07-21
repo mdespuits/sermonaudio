@@ -1,17 +1,14 @@
 module SermonAudio
-  ## Require Savon library
-  include Savon
+  extend self
 
-  module Client
+  WSDL_ENDPOINT = 'http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL'
 
-    WSDL_ENDPOINT = 'http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL'
-
-    extend self
-
-    ## Setup the client
-    def client
-      @sermonaudio_savon_client ||= Savon::Client.new wsdl: WSDL_ENDPOINT
+  ## Setup the client
+  def client
+    @client ||= Savon.client do
+      wsdl WSDL_ENDPOINT
+      soap_version 2
     end
-
   end
+
 end

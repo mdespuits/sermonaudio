@@ -1,10 +1,12 @@
 module SermonAudio
 	class Finder
 
-    @@client ||= SermonAudio::Sermon.new.savon
+    def self.client
+      @client ||= SermonAudio::Sermon.new.savon
+    end
 
     def self.request(request_name, opts = {})
-      @@client.call request_name, message: opts
+      client.call request_name, message: opts
     end
 
     def self.newest(opts = {})
