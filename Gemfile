@@ -2,11 +2,16 @@ source "http://rubygems.org"
 
 # Specify your gem's dependencies in sermonaudio-savon.gemspec
 
-gem 'pry'
-gem 'rspec'
-gem 'rake'
-gem 'rubyntlm'
+group :development, :test do
+  gem 'pry'
+  gem 'rake'
+  gem 'rubyntlm'
+end
 
-# gem 'vcr'
+group :test do
+  gem 'rspec'
+  gem 'vcr'
+  gem 'webmock'
+end
 
 gemspec

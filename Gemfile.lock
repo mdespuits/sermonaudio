@@ -8,11 +8,14 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.3.6)
     akami (1.2.2)
       gyoku (>= 0.4.0)
       nokogiri
     builder (3.2.2)
     coderay (1.1.0)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
     gyoku (1.1.1)
       builder (>= 2.1.2)
@@ -45,6 +48,7 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
     rubyntlm (0.4.0)
+    safe_yaml (1.0.3)
     savon (2.6.0)
       akami (~> 1.2.0)
       builder (>= 2.1.2)
@@ -58,10 +62,14 @@ GEM
     systemu (2.6.4)
     uuid (2.3.7)
       macaddr (~> 1.0)
+    vcr (2.9.2)
     wasabi (3.3.0)
       httpi (~> 2.0)
       mime-types (< 2.0.0)
       nokogiri (>= 1.4.0)
+    webmock (1.15.2)
+      addressable (>= 2.2.7)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -72,3 +80,5 @@ DEPENDENCIES
   rspec
   rubyntlm
   sermonaudio!
+  vcr
+  webmock
