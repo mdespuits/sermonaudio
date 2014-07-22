@@ -17,6 +17,35 @@ Then run bundle to install it:
 
 ## General Use
 
+### `#get_sermon_info`
+
+```ruby
+sermon_id = "720141933368"
+SermonAudio.get_sermon_info(sermon_id)
+# => {:sermon_id=>"720141933368",
+# :title=>"Facing Death",
+# :short_title=>"Facing Death",
+# :sub_title=>"Psalm 23",
+# :speaker=>"Mitchell Jones",
+# :event_type=>"Sunday - PM",
+# :bible_text=>"Psalm 23:4",
+# ...
+#}
+```
+
+### `#get_speakers_by_member_id`
+
+```ruby
+member_id = :cbcelgin
+SermonAudio.get_speakers_by_member_id(member_id)
+# => ["Kevin Bridges",
+#  "Jim Bryant",
+#  "Josh Bryant",
+#  "Pastor Tim Goad",
+#  "Mitchell Jones",
+#  "Charles Wilson"]
+```
+
 sermonaudio is very simple to use. Only two 'getter' methods are set: find and get. Here are some examples:
 
     sermonaudio = SermonAudio::Sermon.new
