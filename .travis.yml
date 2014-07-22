@@ -6,5 +6,6 @@ rvm:
 env: SERMONAUDIO_MEMBER_ID=example SERMONAUDIO_PASSWORD=example
 before_script:
   - gem install nokogiri -- --use-system-libraries
+bundler_args: --without development
 notifications:
   email: false
