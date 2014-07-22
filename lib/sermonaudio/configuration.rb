@@ -1,9 +1,12 @@
 module SermonAudio
   class Configuration
-
     # Have a member_id and password been supplied
     def self.login_provided?
       @member_id && @password
+    end
+
+    class << self
+      attr_writer :member_id, :password
     end
 
     def self.set(&block)
@@ -11,22 +14,17 @@ module SermonAudio
     end
 
     def self.member_id
-      raise MissingConfiguration, 'You are missing your Member ID.' unless @member_id
+      unless @member_id
+        fail MissingConfiguration, 'You must set your SermonAudio MemberID'
+      end
       @member_id
     end
 
-    def self.member_id=(name)
-      @member_id = name
-    end
-
     def self.password
-      raise MissingConfiguration, 'You are missing your Password.' unless @password
+      unless @password
+        fail MissingConfiguration, 'Please provide your SermonAudio password.'
+      end
       @password
     end
-
-    def self.password=(password)
-      @password = password
-    end
-
   end
 end

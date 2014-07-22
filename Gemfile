@@ -6,6 +6,7 @@ group :development, :test do
   gem 'pry'
   gem 'rake'
   gem 'rubyntlm'
+  gem 'rubocop', require: false
 end
 
 group :test do

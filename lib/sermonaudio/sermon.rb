@@ -7,7 +7,6 @@ module SermonAudio
     end
 
     def find(method, args = {})
-      # make calls to the right method based on the method and the arguments
       case
       when method == :sermons
         Finder.sermons(args)

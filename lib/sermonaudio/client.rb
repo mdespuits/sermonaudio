@@ -1,5 +1,5 @@
 module SermonAudio
-  extend self
+  module_function
 
   WSDL_ENDPOINT = 'http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL'
 
@@ -10,5 +10,4 @@ module SermonAudio
       soap_version 2
     end
   end
-
 end

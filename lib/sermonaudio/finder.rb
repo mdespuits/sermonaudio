@@ -1,6 +1,5 @@
 module SermonAudio
-	class Finder
-
+  class Finder
     def self.client
       @client ||= SermonAudio::Sermon.new.savon
     end
@@ -10,15 +9,18 @@ module SermonAudio
     end
 
     def self.newest(opts = {})
-      raise MissingOption, "Please provide valid parameters when retrieving newest entries" if opts.empty?
-      call = :newest_sermons_by_speaker if opts.has_key? "SpeakerName"
-      call = :newest_sermons_by_member_id if opts.has_key? "MemberID"
-      if opts.has_key?(:what) && opts[:what] == "series"
-        raise MissingOption, "Please provid a member id when searching for a series" unless opts.has_key? "MemberID"
+      if opts.empty?
+        fail MissingOption, 'Provide valid parameters for newest entries'
+      end
+      call = :newest_sermons_by_speaker if opts.key? 'SpeakerName'
+      call = :newest_sermons_by_member_id if opts.key? 'MemberID'
+      if opts[:what] == 'series'
+        unless opts.keys? 'MemberID'
+          fail MissingOption, 'Provide a Member ID when searching for a series'
+        end
         call = :get_newest_series_by_member_id
       end
-      response = self.request(call, opts)
-      # puts response.inspect
+      request(call, opts)
     end
 
     def self.sermons(opts = {})
@@ -35,6 +37,5 @@ module SermonAudio
       # response = request(call, opts)
       # puts response.inspect
     end
-
-	end
+  end
 end

@@ -15,18 +15,18 @@ describe SermonAudio::Sermon do
   describe "#find(:newest)" do
 
     context "success" do
-      it "should find newest sermons by SpeakerName", vcr: true do
+      xit "should find newest sermons by SpeakerName", vcr: true do
         result = sermons.find :newest, "SpeakerName" => "Mitchell Jones"
         expect(result).to be_a Savon::Response
       end
     end
 
     context "failure" do
-      it "should raise an error if no arguments are passed", vcr: true do
+      xit "should raise an error if no arguments are passed", vcr: true do
         expect { sermons.find(:newest) }.to raise_error(SermonAudio::MissingOption)
       end
 
-      it "should raise an error if invalid arguments are passed", vcr: true do
+      xit "should raise an error if invalid arguments are passed", vcr: true do
         expect {
           sermons.find(:newest, :what => "series")
         }.to raise_error(SermonAudio::MissingOption)

@@ -1,0 +1,12 @@
+AllCops:
+  Excludes:
+    - spec/**
+
+AmbiguousOperator:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 80
