@@ -14,5 +14,14 @@ module SermonAudio
       end
     end
 
+    describe '#get_speakers_by_member_id' do
+      it "should return the correct results", vcr: true do
+        result = operation.get_speakers_by_member_id(:cbcelgin)
+        expect(result).to include "Mitchell Jones"
+        expect(result).to include "Kevin Bridges"
+        expect(result).to include "Pastor Tim Goad"
+      end
+    end
+
   end
 end
