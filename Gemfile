@@ -12,7 +12,7 @@ group :test do
   gem 'rspec'
   gem 'vcr'
   gem 'webmock'
-  gem 'simplecov'
+  gem 'simplecov', require: false
 end
 
 gemspec
