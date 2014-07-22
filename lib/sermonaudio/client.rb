@@ -5,7 +5,7 @@ module SermonAudio
 
   ## Setup the client
   def client
-    @client ||= Savon.client do
+    Savon.client do
       wsdl WSDL_ENDPOINT
       soap_version 2
     end
