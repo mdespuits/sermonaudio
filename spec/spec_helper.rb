@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bundler/setup'
 
 require 'sermonaudio' # and any other gems you need
-require 'pry'
+require 'pry' unless ENV["TRAVIS"]
 require 'vcr'
 require 'simplecov'
 

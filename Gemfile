@@ -3,12 +3,12 @@ source "http://rubygems.org"
 # Specify your gem's dependencies in sermonaudio-savon.gemspec
 
 group :development do
-  gem 'pry'
   gem 'rubyntlm'
 end
 
 group :development, :test do
   gem 'rake'
+  gem 'pry'
   gem 'rubocop', require: false
 end
 
