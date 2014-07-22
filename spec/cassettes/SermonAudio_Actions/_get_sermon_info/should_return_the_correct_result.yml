@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 22 Jul 2014 17:52:46 GMT
+      - Tue, 22 Jul 2014 21:57:31 GMT
       Content-Length:
       - '3386'
     body:
@@ -455,7 +455,7 @@ http_interactions:
         \     <soap12:address location=\"http://web4.sa-media.com/SASoapAPI/service.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Tue, 22 Jul 2014 17:52:49 GMT
+  recorded_at: Tue, 22 Jul 2014 21:57:35 GMT
 - request:
     method: post
     uri: http://web4.sa-media.com/SASoapAPI/service.asmx
@@ -463,14 +463,14 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.sermonaudio.com/"
-        xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Body><tns:GetSpeakersByMemberID><tns:MemberID><SA_MEMBER_ID></tns:MemberID></tns:GetSpeakersByMemberID></env:Body></env:Envelope>
+        xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Body><tns:GetSermonInfo><tns:MemberID><SA_MEMBER_ID></tns:MemberID><tns:Password><SA_PASSWORD></tns:Password><tns:SermonID>720141933368</tns:SermonID></tns:GetSermonInfo></env:Body></env:Envelope>
     headers:
       Soapaction:
-      - '"http://www.sermonaudio.com/GetSpeakersByMemberID"'
+      - '"http://www.sermonaudio.com/GetSermonInfo"'
       Content-Type:
       - application/soap+xml;charset=UTF-8
       Content-Length:
-      - '371'
+      - '436'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -493,16 +493,21 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Tue, 22 Jul 2014 17:52:49 GMT
+      - Tue, 22 Jul 2014 21:57:32 GMT
       Content-Length:
-      - '581'
+      - '1109'
     body:
       encoding: UTF-8
-      string: <?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetSpeakersByMemberIDResponse
-        xmlns="http://www.sermonaudio.com/"><GetSpeakersByMemberIDResult><string>Kevin
-        Bridges</string><string>Jim Bryant</string><string>Josh Bryant</string><string>Pastor
-        Tim Goad</string><string>Mitchell Jones</string><string>Charles Wilson</string></GetSpeakersByMemberIDResult></GetSpeakersByMemberIDResponse></soap:Body></soap:Envelope>
+      string: '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetSermonInfoResponse
+        xmlns="http://www.sermonaudio.com/"><GetSermonInfoResult><SermonID>720141933368</SermonID><Title>Facing
+        Death</Title><ShortTitle>Facing Death</ShortTitle><SubTitle>Psalm 23</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>Psalm 23:4</BibleText><Date>2014-07-20T00:00:00</Date><CreateDate>2014-07-20T20:53:56</CreateDate><DownloadCount>8</DownloadCount><MP3Duration>39
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/720141933368/720141933368.mp3</MP3Filename><Language
+        /><Keywords>bible psalms death jesus evil shepherd staff comfort</Keywords><MoreInfoText>Facing
+        Death - Pastor Mitchell Jones - Cornerstone Baptist Church 709 Hwy. 95 N.
+        Elgin TX. 78621 (512) 285-4280 http://<SA_MEMBER_ID>.org Email: <SA_MEMBER_ID>@gmail.com
+        7-20-14</MoreInfoText></GetSermonInfoResult></GetSermonInfoResponse></soap:Body></soap:Envelope>'
     http_version: 
-  recorded_at: Tue, 22 Jul 2014 17:52:51 GMT
+  recorded_at: Tue, 22 Jul 2014 21:57:35 GMT
 recorded_with: VCR 2.9.2

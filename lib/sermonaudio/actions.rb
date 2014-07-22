@@ -1,7 +1,7 @@
 module SermonAudio
-  # Operations that the SermonAudio module can call to
+  # Actions that the SermonAudio module can call to
   # retrieve data from sermonaudio.com
-  module Operations
+  module Actions
     def get_sermon_info(sermon_id)
       execute_call(__callee__,
                    'MemberID' => ENV['SERMONAUDIO_MEMBER_ID'],

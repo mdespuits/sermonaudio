@@ -6,11 +6,11 @@ require 'sermonaudio/exceptions'    # For exceptions
 
 # Load SermonAudio specific files
 require 'sermonaudio/configuration'
-require 'sermonaudio/operations'
+require 'sermonaudio/actions'
 require 'sermonaudio/client'
 require 'sermonaudio/sermon'
 require 'sermonaudio/finder'
 
 module SermonAudio
-  extend Operations
+  extend Actions
 end
