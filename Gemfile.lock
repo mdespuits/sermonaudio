@@ -26,6 +26,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.0)
+    multi_json (1.10.1)
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     nori (2.4.0)
@@ -58,6 +59,10 @@ GEM
       nori (~> 2.4.0)
       uuid (~> 2.3.7)
       wasabi (~> 3.3.0)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     slop (3.5.0)
     systemu (2.6.4)
     uuid (2.3.7)
@@ -80,5 +85,6 @@ DEPENDENCIES
   rspec
   rubyntlm
   sermonaudio!
+  simplecov
   vcr
   webmock

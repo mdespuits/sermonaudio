@@ -4,6 +4,9 @@ require 'bundler/setup'
 require 'sermonaudio' # and any other gems you need
 require 'pry'
 require 'vcr'
+require 'simplecov'
+
+SimpleCov.start unless ENV["TRAVIS"]
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
