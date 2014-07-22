@@ -1,12 +1,18 @@
-require 'rubygems'
 require 'bundler/setup'
 
-require 'sermonaudio' # and any other gems you need
+require 'simplecov'
+require 'coveralls'
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+SimpleCov.start
+
 require 'pry' unless ENV["TRAVIS"]
 require 'vcr'
-require 'simplecov'
 
-SimpleCov.start unless ENV["TRAVIS"]
+require 'sermonaudio'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
