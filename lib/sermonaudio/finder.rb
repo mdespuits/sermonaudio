@@ -8,22 +8,22 @@ module SermonAudio
       client.call request_name, message: opts
     end
 
-    def self.newest(opts = {})
+    def self.newest(_opts = {})
       # response = request(call, opts)
       # puts response.inspect
     end
 
-    def self.sermons(opts = {})
+    def self.sermons(_opts = {})
       # response = request(call, opts)
       # puts response.inspect
     end
 
-    def self.series(opts = {})
+    def self.series(_opts = {})
       # response = request(call, opts)
       # puts response.inspect
     end
 
-    def self.speakers(opts = {})
+    def self.speakers(_opts = {})
       # response = request(call, opts)
       # puts response.inspect
     end

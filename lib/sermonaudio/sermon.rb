@@ -10,7 +10,7 @@ module SermonAudio
       Finder.send(method, args)
     end
 
-    def get(method, *args)
+    def get(_method, *_args)
       # invoke the find method if user login configuration is provided
     end
 
