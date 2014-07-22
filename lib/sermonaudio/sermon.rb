@@ -7,16 +7,7 @@ module SermonAudio
     end
 
     def find(method, args = {})
-      case
-      when method == :sermons
-        Finder.sermons(args)
-      when method == :speakers
-        Finder.speakers(args)
-      when method == :series
-        Finder.series(args)
-      when method == :newest
-        Finder.newest(args)
-      end
+      Finder.send(method, args)
     end
 
     def get(method, *args)

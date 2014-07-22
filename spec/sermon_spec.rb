@@ -12,7 +12,15 @@ describe SermonAudio::Sermon do
     expect(sermons.savon.globals[:wsdl]).to eq("http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL")
   end
 
-  describe "#find(:newest)" do
+  describe "#find" do
+
+    it "should delegate arguments to Finder" do
+      sermon = SermonAudio::Sermon.new
+      [:sermons, :speakers, :series, :newest].each do |arg|
+        expect(SermonAudio::Finder).to receive(arg).with({})
+        sermon.find(arg, {})
+      end
+    end
 
     context "success" do
       xit "should find newest sermons by SpeakerName", vcr: true do
