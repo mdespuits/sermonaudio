@@ -10,6 +10,11 @@ module SermonAudio
       )
     end
 
+    def get_series_by_member_id(member_id)
+      response = execute_call(__callee__, 'MemberID' => member_id)
+      response[:string] || []
+    end
+
     def get_speakers_by_member_id(member_id)
       response = execute_call(__callee__,  'MemberID' => member_id)
       response[:string] || []

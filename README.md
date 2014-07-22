@@ -47,6 +47,13 @@ SermonAudio.get_speakers_by_member_id(member_id)
 #  "Charles Wilson"]
 ```
 
+### `#get_series_by_member_id`
+
+```ruby
+SermonAudio.get_series_by_member_id(:cbcelgin)
+# => ["1 Corinthians 13", "1 Peter", "Psalm 23", "The Beatitudes", "The Nature Of Repentance"]
+```
+
 sermonaudio is very simple to use. Only two 'getter' methods are set: find and get. Here are some examples:
 
     sermonaudio = SermonAudio::Sermon.new

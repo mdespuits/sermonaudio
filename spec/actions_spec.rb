@@ -23,5 +23,15 @@ module SermonAudio
       end
     end
 
+    describe '#get_series_by_member_id' do
+      it "should return the correct results", vcr: true do
+        result = action.get_series_by_member_id(:cbcelgin)
+        expect(result).to eq [
+          "1 Corinthians 13", "1 Peter", "Psalm 23",
+          "The Beatitudes", "The Nature Of Repentance"
+        ]
+      end
+    end
+
   end
 end
