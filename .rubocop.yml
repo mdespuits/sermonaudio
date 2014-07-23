@@ -2,6 +2,9 @@ AllCops:
   Excludes:
     - spec/**
 
+AccessorMethodName:
+  Enabled: false
+
 AmbiguousOperator:
   Enabled: false
 
