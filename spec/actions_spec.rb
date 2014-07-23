@@ -33,5 +33,16 @@ module SermonAudio
       end
     end
 
+    describe '#get_event_types' do
+      it "should return the correct results", vcr: true do
+        result = action.get_event_types
+        expect(result).to include "Audio Book"
+        expect(result).to include "Bible Study"
+        expect(result).to include "Camp Meeting"
+        expect(result).to include "Sunday - PM"
+        expect(result).to include "Youth"
+      end
+    end
+
   end
 end

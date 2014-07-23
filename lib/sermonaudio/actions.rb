@@ -20,6 +20,11 @@ module SermonAudio
       response[:string] || []
     end
 
+    def get_event_types
+      response = execute_call(__callee__)
+      response[:string] || []
+    end
+
     private
 
     def execute_call(name, opts = {})
