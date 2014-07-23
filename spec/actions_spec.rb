@@ -59,6 +59,14 @@ module SermonAudio
       end
     end
 
+    describe '#get_newest_series_by_member_id' do
+      it "should return the correct results", vcr: true do
+        result = action.get_newest_series_by_member_id(:cbcelgin)
+        expect(result[0]).to eq "Psalm 23"
+        expect(result[1]).to eq "1 Peter"
+      end
+    end
+
     describe '#get_event_types' do
       it "should return the correct results", vcr: true do
         result = action.get_event_types

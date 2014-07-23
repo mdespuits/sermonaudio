@@ -74,6 +74,13 @@ SermonAudio.get_series_by_member_id(:cbcelgin)
 # => ["1 Corinthians 13", "1 Peter", "Psalm 23", "The Beatitudes", "The Nature Of Repentance"]
 ```
 
+### `#get_newest_series_by_member_id`
+
+```ruby
+SermonAudio.get_newest_series_by_member_id(:cbcelgin)
+# => ["Psalm 23", "1 Peter", "1 Corinthians 13"]
+```
+
 ### `#get_event_types`
 
 ```ruby
