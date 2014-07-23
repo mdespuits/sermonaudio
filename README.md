@@ -93,6 +93,8 @@ SermonAudio.get_event_types
 #  ....
 ```
 
+### `#sermon_list`
+
 ```ruby
 SermonAudio.sermon_list(:cbcelgin)
 # => [{:sermon_id=>"720141933368",
