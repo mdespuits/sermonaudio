@@ -30,6 +30,11 @@ module SermonAudio
       response[:string] || []
     end
 
+    def sermon_list(member_id)
+      response = execute_call(__callee__, 'MemberID' => member_id)
+      response[:sermon] || []
+    end
+
     private
 
     def execute_call(name, opts = {})

@@ -4,6 +4,21 @@ module SermonAudio
   describe Actions do
     subject(:action) { Class.new.extend(Actions) }
 
+    describe '#sermon_list' do
+      it "should return a list of sermons for the specified church", vcr: true do
+        result = action.sermon_list(:cbcelgin)
+        expect(result.last[:sermon_id]).to eq "515111348415"
+        expect(result.last[:title]).to eq "A Faith To Die With"
+        expect(result.last[:sub_title]).to be_nil
+        expect(result.last[:speaker]).to eq "Mitchell Jones"
+        expect(result.last[:event_type]).to eq "Sunday - AM"
+        expect(result.last[:bible_text]).to eq "Hebrews"
+        expect(result.last[:download_count]).to eq "62"
+        expect(result.last[:mp3_duration]).to eq "64 minutes"
+        expect(result.last[:mp3_filename]).to eq "http://mp3.sa-media.com/filearea/515111348415/515111348415.mp3"
+      end
+    end
+
     describe '#get_sermon_info' do
       it "should return the correct result", vcr: true do
         result = action.get_sermon_info(720141933368)

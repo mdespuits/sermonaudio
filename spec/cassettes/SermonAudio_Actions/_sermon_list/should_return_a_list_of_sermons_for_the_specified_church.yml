@@ -1,0 +1,1189 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://web4.sa-media.com/SASoapAPI/service.asmx?WSDL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - text/xml; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 23 Jul 2014 17:50:24 GMT
+      Content-Length:
+      - '3386'
+    body:
+      encoding: UTF-8
+      string: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<wsdl:definitions xmlns:s=\"http://www.w3.org/2001/XMLSchema\"
+        xmlns:soap12=\"http://schemas.xmlsoap.org/wsdl/soap12/\" xmlns:mime=\"http://schemas.xmlsoap.org/wsdl/mime/\"
+        xmlns:tns=\"http://www.sermonaudio.com/\" xmlns:soap=\"http://schemas.xmlsoap.org/wsdl/soap/\"
+        xmlns:tm=\"http://microsoft.com/wsdl/mime/textMatching/\" xmlns:http=\"http://schemas.xmlsoap.org/wsdl/http/\"
+        xmlns:soapenc=\"http://schemas.xmlsoap.org/soap/encoding/\" targetNamespace=\"http://www.sermonaudio.com/\"
+        xmlns:wsdl=\"http://schemas.xmlsoap.org/wsdl/\">\r\n  <wsdl:types>\r\n    <s:schema
+        elementFormDefault=\"qualified\" targetNamespace=\"http://www.sermonaudio.com/\">\r\n
+        \     <s:element name=\"GetSeriesByMemberID\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MemberID\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSeriesByMemberIDResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSeriesByMemberIDResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:complexType name=\"ArrayOfString\">\r\n        <s:sequence>\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"string\" nillable=\"true\"
+        type=\"s:string\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \     <s:element name=\"GetNewestSeriesByMemberID\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MemberID\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetNewestSeriesByMemberIDResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetNewestSeriesByMemberIDResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetSpeakersByMemberID\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MemberID\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpeakersByMemberIDResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpeakersByMemberIDResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetSpeakersByKeyword\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"Keyword\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"GetSpeakersByKeywordResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetSpeakersByKeywordResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetEventTypes\">\r\n        <s:complexType />\r\n
+        \     </s:element>\r\n      <s:element name=\"GetEventTypesResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"GetEventTypesResult\" type=\"tns:ArrayOfString\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetLanguages\">\r\n        <s:complexType />\r\n      </s:element>\r\n
+        \     <s:element name=\"GetLanguagesResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"GetLanguagesResult\" type=\"tns:ArrayOfString\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"SubmitSermon\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"MemberID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Title\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"ShortTitle\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"SubTitle\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"EventType\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"DatePreached\"
+        type=\"s:dateTime\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"Speaker\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"BibleText\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"Language\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Keywords\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"MoreInfoText\"
+        type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"SubmitSermonResponse\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"SubmitSermonResult\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"UpdateSermon\">\r\n        <s:complexType>\r\n          <s:sequence>\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"MemberID\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"SermonID\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Title\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"ShortTitle\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SubTitle\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"EventType\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"1\" maxOccurs=\"1\"
+        name=\"DatePreached\" type=\"s:dateTime\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Speaker\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"BibleText\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Language\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Keywords\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MoreInfoText\" type=\"s:string\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"UpdateSermonResponse\">\r\n
+        \       <s:complexType />\r\n      </s:element>\r\n      <s:element name=\"SermonList\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"MemberID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\" type=\"s:string\"
+        />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Category\"
+        type=\"s:string\" />\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"Item\" type=\"s:string\" />\r\n          </s:sequence>\r\n        </s:complexType>\r\n
+        \     </s:element>\r\n      <s:element name=\"SermonListResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"SermonListResult\" type=\"tns:ArrayOfSermon\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"ArrayOfSermon\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"Sermon\" nillable=\"true\" type=\"tns:Sermon\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"Sermon\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SermonID\" type=\"s:string\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Title\"
+        type=\"s:string\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"SubTitle\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Speaker\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"EventType\" type=\"s:string\" />\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"BibleText\" type=\"s:string\"
+        />\r\n          <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"Date\" type=\"s:dateTime\"
+        />\r\n          <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"DownloadCount\"
+        type=\"s:int\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MP3Duration\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"MP3Filename\" type=\"s:string\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:element name=\"NewestSermonsByMemberID\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"MemberID\" type=\"s:string\" />\r\n
+        \         </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"NewestSermonsByMemberIDResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"NewestSermonsByMemberIDResult\" type=\"tns:ArrayOfSermon\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"NewestSermonsBySpeaker\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"SpeakerName\" type=\"s:string\" />\r\n
+        \         </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"NewestSermonsBySpeakerResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"NewestSermonsBySpeakerResult\" type=\"tns:ArrayOfSermon\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"FavoriteSermons\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"MemberID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"FavoriteSermonsResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"FavoriteSermonsResult\" type=\"tns:ArrayOfSermon\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:element name=\"FavoriteBroadcasters\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"MemberID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"FavoriteBroadcastersResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"FavoriteBroadcastersResult\" type=\"tns:ArrayOfMember\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"ArrayOfMember\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"Member\" nillable=\"true\" type=\"tns:Member\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"Member\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SourceID\" type=\"s:string\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SourceDesc\"
+        type=\"s:string\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"SourceLocation\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Minister\" type=\"s:string\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:element name=\"FavoriteSpeakers\">\r\n
+        \       <s:complexType>\r\n          <s:sequence>\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"MemberID\" type=\"s:string\" />\r\n
+        \           <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Password\" type=\"s:string\"
+        />\r\n          </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"FavoriteSpeakersResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"FavoriteSpeakersResult\" type=\"tns:ArrayOfSpeaker\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"ArrayOfSpeaker\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"unbounded\"
+        name=\"Speaker\" nillable=\"true\" type=\"tns:Speaker\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:complexType name=\"Speaker\">\r\n        <s:sequence>\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SpeakerName\"
+        type=\"s:string\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"SortName\" type=\"s:string\" />\r\n          <s:element minOccurs=\"1\"
+        maxOccurs=\"1\" name=\"Counter\" type=\"s:int\" />\r\n        </s:sequence>\r\n
+        \     </s:complexType>\r\n      <s:element name=\"GetSermonInfo\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MemberID\" type=\"s:string\" />\r\n            <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Password\" type=\"s:string\" />\r\n            <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"SermonID\" type=\"s:string\" />\r\n
+        \         </s:sequence>\r\n        </s:complexType>\r\n      </s:element>\r\n
+        \     <s:element name=\"GetSermonInfoResponse\">\r\n        <s:complexType>\r\n
+        \         <s:sequence>\r\n            <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"GetSermonInfoResult\" type=\"tns:SermonSingle\" />\r\n          </s:sequence>\r\n
+        \       </s:complexType>\r\n      </s:element>\r\n      <s:complexType name=\"SermonSingle\">\r\n
+        \       <s:sequence>\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"SermonID\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"Title\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"ShortTitle\" type=\"s:string\" />\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SubTitle\" type=\"s:string\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Speaker\"
+        type=\"s:string\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"EventType\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"BibleText\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"Date\" type=\"s:dateTime\" />\r\n          <s:element
+        minOccurs=\"1\" maxOccurs=\"1\" name=\"CreateDate\" type=\"s:dateTime\" />\r\n
+        \         <s:element minOccurs=\"1\" maxOccurs=\"1\" name=\"DownloadCount\"
+        type=\"s:int\" />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\"
+        name=\"MP3Duration\" type=\"s:string\" />\r\n          <s:element minOccurs=\"0\"
+        maxOccurs=\"1\" name=\"MP3Filename\" type=\"s:string\" />\r\n          <s:element
+        minOccurs=\"0\" maxOccurs=\"1\" name=\"Language\" type=\"s:string\" />\r\n
+        \         <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Keywords\" type=\"s:string\"
+        />\r\n          <s:element minOccurs=\"0\" maxOccurs=\"1\" name=\"MoreInfoText\"
+        type=\"s:string\" />\r\n        </s:sequence>\r\n      </s:complexType>\r\n
+        \   </s:schema>\r\n  </wsdl:types>\r\n  <wsdl:message name=\"GetSeriesByMemberIDSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSeriesByMemberID\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"GetSeriesByMemberIDSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSeriesByMemberIDResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetNewestSeriesByMemberIDSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetNewestSeriesByMemberID\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetNewestSeriesByMemberIDSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetNewestSeriesByMemberIDResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpeakersByMemberIDSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpeakersByMemberID\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"GetSpeakersByMemberIDSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpeakersByMemberIDResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSpeakersByKeywordSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpeakersByKeyword\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"GetSpeakersByKeywordSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSpeakersByKeywordResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetEventTypesSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetEventTypes\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetEventTypesSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:GetEventTypesResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"GetLanguagesSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:GetLanguages\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetLanguagesSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetLanguagesResponse\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"SubmitSermonSoapIn\">\r\n    <wsdl:part
+        name=\"parameters\" element=\"tns:SubmitSermon\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"SubmitSermonSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:SubmitSermonResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"UpdateSermonSoapIn\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:UpdateSermon\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"UpdateSermonSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:UpdateSermonResponse\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"SermonListSoapIn\">\r\n    <wsdl:part
+        name=\"parameters\" element=\"tns:SermonList\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"SermonListSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:SermonListResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"NewestSermonsByMemberIDSoapIn\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:NewestSermonsByMemberID\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"NewestSermonsByMemberIDSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:NewestSermonsByMemberIDResponse\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"NewestSermonsBySpeakerSoapIn\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:NewestSermonsBySpeaker\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"NewestSermonsBySpeakerSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:NewestSermonsBySpeakerResponse\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"FavoriteSermonsSoapIn\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:FavoriteSermons\" />\r\n  </wsdl:message>\r\n  <wsdl:message
+        name=\"FavoriteSermonsSoapOut\">\r\n    <wsdl:part name=\"parameters\" element=\"tns:FavoriteSermonsResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"FavoriteBroadcastersSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:FavoriteBroadcasters\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"FavoriteBroadcastersSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:FavoriteBroadcastersResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"FavoriteSpeakersSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:FavoriteSpeakers\" />\r\n
+        \ </wsdl:message>\r\n  <wsdl:message name=\"FavoriteSpeakersSoapOut\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:FavoriteSpeakersResponse\"
+        />\r\n  </wsdl:message>\r\n  <wsdl:message name=\"GetSermonInfoSoapIn\">\r\n
+        \   <wsdl:part name=\"parameters\" element=\"tns:GetSermonInfo\" />\r\n  </wsdl:message>\r\n
+        \ <wsdl:message name=\"GetSermonInfoSoapOut\">\r\n    <wsdl:part name=\"parameters\"
+        element=\"tns:GetSermonInfoResponse\" />\r\n  </wsdl:message>\r\n  <wsdl:portType
+        name=\"ServiceSoap\">\r\n    <wsdl:operation name=\"GetSeriesByMemberID\">\r\n
+        \     <wsdl:input message=\"tns:GetSeriesByMemberIDSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:GetSeriesByMemberIDSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetNewestSeriesByMemberID\">\r\n      <wsdl:input
+        message=\"tns:GetNewestSeriesByMemberIDSoapIn\" />\r\n      <wsdl:output message=\"tns:GetNewestSeriesByMemberIDSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetSpeakersByMemberID\">\r\n
+        \     <wsdl:input message=\"tns:GetSpeakersByMemberIDSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:GetSpeakersByMemberIDSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"GetSpeakersByKeyword\">\r\n      <wsdl:input message=\"tns:GetSpeakersByKeywordSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSpeakersByKeywordSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetEventTypes\">\r\n      <wsdl:input
+        message=\"tns:GetEventTypesSoapIn\" />\r\n      <wsdl:output message=\"tns:GetEventTypesSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"GetLanguages\">\r\n
+        \     <wsdl:input message=\"tns:GetLanguagesSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:GetLanguagesSoapOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"SubmitSermon\">\r\n      <wsdl:input message=\"tns:SubmitSermonSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:SubmitSermonSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"UpdateSermon\">\r\n      <wsdl:input message=\"tns:UpdateSermonSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:UpdateSermonSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"SermonList\">\r\n      <wsdl:input message=\"tns:SermonListSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:SermonListSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"NewestSermonsByMemberID\">\r\n      <wsdl:input
+        message=\"tns:NewestSermonsByMemberIDSoapIn\" />\r\n      <wsdl:output message=\"tns:NewestSermonsByMemberIDSoapOut\"
+        />\r\n    </wsdl:operation>\r\n    <wsdl:operation name=\"NewestSermonsBySpeaker\">\r\n
+        \     <wsdl:input message=\"tns:NewestSermonsBySpeakerSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:NewestSermonsBySpeakerSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"FavoriteSermons\">\r\n      <wsdl:input message=\"tns:FavoriteSermonsSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:FavoriteSermonsSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \   <wsdl:operation name=\"FavoriteBroadcasters\">\r\n      <wsdl:input message=\"tns:FavoriteBroadcastersSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:FavoriteBroadcastersSoapOut\" />\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"FavoriteSpeakers\">\r\n
+        \     <wsdl:input message=\"tns:FavoriteSpeakersSoapIn\" />\r\n      <wsdl:output
+        message=\"tns:FavoriteSpeakersSoapOut\" />\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSermonInfo\">\r\n      <wsdl:input message=\"tns:GetSermonInfoSoapIn\"
+        />\r\n      <wsdl:output message=\"tns:GetSermonInfoSoapOut\" />\r\n    </wsdl:operation>\r\n
+        \ </wsdl:portType>\r\n  <wsdl:binding name=\"ServiceSoap\" type=\"tns:ServiceSoap\">\r\n
+        \   <soap:binding transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n
+        \   <wsdl:operation name=\"GetSeriesByMemberID\">\r\n      <soap:operation
+        soapAction=\"http://www.sermonaudio.com/GetSeriesByMemberID\" style=\"document\"
+        />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\" />\r\n      </wsdl:input>\r\n
+        \     <wsdl:output>\r\n        <soap:body use=\"literal\" />\r\n      </wsdl:output>\r\n
+        \   </wsdl:operation>\r\n    <wsdl:operation name=\"GetNewestSeriesByMemberID\">\r\n
+        \     <soap:operation soapAction=\"http://www.sermonaudio.com/GetNewestSeriesByMemberID\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpeakersByMemberID\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/GetSpeakersByMemberID\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpeakersByKeyword\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/GetSpeakersByKeyword\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetEventTypes\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/GetEventTypes\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetLanguages\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/GetLanguages\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"SubmitSermon\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/SubmitSermon\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"UpdateSermon\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/UpdateSermon\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"SermonList\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/SermonList\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"NewestSermonsByMemberID\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/NewestSermonsByMemberID\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"NewestSermonsBySpeaker\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/NewestSermonsBySpeaker\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"FavoriteSermons\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/FavoriteSermons\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"FavoriteBroadcasters\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/FavoriteBroadcasters\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"FavoriteSpeakers\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/FavoriteSpeakers\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSermonInfo\">\r\n      <soap:operation soapAction=\"http://www.sermonaudio.com/GetSermonInfo\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:binding name=\"ServiceSoap12\" type=\"tns:ServiceSoap\">\r\n    <soap12:binding
+        transport=\"http://schemas.xmlsoap.org/soap/http\" />\r\n    <wsdl:operation
+        name=\"GetSeriesByMemberID\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/GetSeriesByMemberID\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetNewestSeriesByMemberID\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/GetNewestSeriesByMemberID\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpeakersByMemberID\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/GetSpeakersByMemberID\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSpeakersByKeyword\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/GetSpeakersByKeyword\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetEventTypes\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/GetEventTypes\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetLanguages\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/GetLanguages\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"SubmitSermon\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/SubmitSermon\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"UpdateSermon\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/UpdateSermon\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"SermonList\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/SermonList\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"NewestSermonsByMemberID\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/NewestSermonsByMemberID\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"NewestSermonsBySpeaker\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/NewestSermonsBySpeaker\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"FavoriteSermons\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/FavoriteSermons\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"FavoriteBroadcasters\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/FavoriteBroadcasters\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"FavoriteSpeakers\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/FavoriteSpeakers\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n    <wsdl:operation
+        name=\"GetSermonInfo\">\r\n      <soap12:operation soapAction=\"http://www.sermonaudio.com/GetSermonInfo\"
+        style=\"document\" />\r\n      <wsdl:input>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:input>\r\n      <wsdl:output>\r\n        <soap12:body use=\"literal\"
+        />\r\n      </wsdl:output>\r\n    </wsdl:operation>\r\n  </wsdl:binding>\r\n
+        \ <wsdl:service name=\"Service\">\r\n    <wsdl:port name=\"ServiceSoap\" binding=\"tns:ServiceSoap\">\r\n
+        \     <soap:address location=\"http://web4.sa-media.com/SASoapAPI/service.asmx\"
+        />\r\n    </wsdl:port>\r\n    <wsdl:port name=\"ServiceSoap12\" binding=\"tns:ServiceSoap12\">\r\n
+        \     <soap12:address location=\"http://web4.sa-media.com/SASoapAPI/service.asmx\"
+        />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
+    http_version: 
+  recorded_at: Wed, 23 Jul 2014 17:50:30 GMT
+- request:
+    method: post
+    uri: http://web4.sa-media.com/SASoapAPI/service.asmx
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.sermonaudio.com/"
+        xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Body><tns:SermonList><tns:MemberID><SA_MEMBER_ID></tns:MemberID></tns:SermonList></env:Body></env:Envelope>
+    headers:
+      Soapaction:
+      - '"http://www.sermonaudio.com/SermonList"'
+      Content-Type:
+      - application/soap+xml;charset=UTF-8
+      Content-Length:
+      - '349'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private, max-age=0
+      Content-Type:
+      - application/soap+xml; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 2.0.50727
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Wed, 23 Jul 2014 17:50:24 GMT
+      Content-Length:
+      - '89356'
+    body:
+      encoding: UTF-8
+      string: '<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><SermonListResponse
+        xmlns="http://www.sermonaudio.com/"><SermonListResult><Sermon><SermonID>720141933368</SermonID><Title>Facing
+        Death</Title><SubTitle>Psalm 23</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Psalm 23:4</BibleText><Date>2014-07-20T18:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>39
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/720141933368/720141933368.mp3</MP3Filename></Sermon><Sermon><SermonID>720141118528</SermonID><Title>How
+        to Trust God in Trying Times</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Habakkuk 1:12</BibleText><Date>2014-07-20T00:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>40
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/720141118528/720141118528.mp3</MP3Filename></Sermon><Sermon><SermonID>713141524117</SermonID><Title>Submitting
+        To Authority in The Workplace Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 2:18-20</BibleText><Date>2014-07-13T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/713141524117/713141524117.mp3</MP3Filename></Sermon><Sermon><SermonID>761420292310</SermonID><Title>He
+        Restores My Soul</Title><SubTitle>Psalm 23</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Psalm 23:3</BibleText><Date>2014-07-06T18:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/761420292310/761420292310.mp3</MP3Filename></Sermon><Sermon><SermonID>761411224110</SermonID><Title>Submitting
+        to Authority in the Workplace (Part 1)</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 2:18-20</BibleText><Date>2014-07-06T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>60
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/761411224110/761411224110.mp3</MP3Filename></Sermon><Sermon><SermonID>629141341270</SermonID><Title>Submitting
+        To Civil Authority Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 2:13-17</BibleText><Date>2014-06-29T00:00:00</Date><DownloadCount>14</DownloadCount><MP3Duration>62
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/629141341270/629141341270.mp3</MP3Filename></Sermon><Sermon><SermonID>62214203181</SermonID><Title>He
+        Leads Me Beside Still Waters</Title><SubTitle>Psalm 23</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>Psalm 23:2b</BibleText><Date>2014-06-22T18:00:00</Date><DownloadCount>7</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/62214203181/62214203181.mp3</MP3Filename></Sermon><Sermon><SermonID>622141327159</SermonID><Title>Submitting
+        To Civil Authority Pt 2</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 2:13-17</BibleText><Date>2014-06-22T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/622141327159/622141327159.mp3</MP3Filename></Sermon><Sermon><SermonID>6151412131410</SermonID><Title>Spiritual
+        Manliness</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Job 1:1</BibleText><Date>2014-06-15T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/6151412131410/6151412131410.mp3</MP3Filename></Sermon><Sermon><SermonID>6114210200</SermonID><Title>He
+        Makes Me Lie Down</Title><SubTitle>Psalm 23</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Psalm 23:2</BibleText><Date>2014-06-01T18:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>48
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/6114210200/6114210200.mp3</MP3Filename></Sermon><Sermon><SermonID>61141839108</SermonID><Title>Submission
+        To Those In Authority Pt.1</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 2:11-12;
+        1 Peter 2</BibleText><Date>2014-06-01T00:00:00</Date><DownloadCount>22</DownloadCount><MP3Duration>45
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/61141839108/61141839108.mp3</MP3Filename></Sermon><Sermon><SermonID>611411133</SermonID><Title>Godly
+        Living Pt. 2</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 2:11-12; 1 Peter 2</BibleText><Date>2014-05-25T00:00:00</Date><DownloadCount>23</DownloadCount><MP3Duration>62
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/611411133/611411133.mp3</MP3Filename></Sermon><Sermon><SermonID>518142038337</SermonID><Title>The
+        Lord is my Shepherd</Title><SubTitle>Psalm 23</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>Psalm 23:1</BibleText><Date>2014-05-18T18:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>42
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/518142038337/518142038337.mp3</MP3Filename></Sermon><Sermon><SermonID>51814137295</SermonID><Title>Godly
+        Living</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 2:11-12</BibleText><Date>2014-05-18T00:00:00</Date><DownloadCount>6</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/51814137295/51814137295.mp3</MP3Filename></Sermon><Sermon><SermonID>54142032551</SermonID><Title>Intro
+        to Psalm 23</Title><SubTitle>Psalm 23</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Psalm 23</BibleText><Date>2014-05-04T18:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>39
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/54142032551/54142032551.mp3</MP3Filename></Sermon><Sermon><SermonID>54141317151</SermonID><Title>The
+        Purpose Of The Church Pt.2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 2:9-10</BibleText><Date>2014-05-04T00:00:00</Date><DownloadCount>7</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/54141317151/54141317151.mp3</MP3Filename></Sermon><Sermon><SermonID>427141729539</SermonID><Title>Gratefully
+        His</Title><SubTitle /><Speaker>Charles Wilson</Speaker><EventType>Sunday
+        - AM</EventType><BibleText>Romans 12:1-2</BibleText><Date>2014-04-27T11:00:00</Date><DownloadCount>21</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/427141729539/427141729539.mp3</MP3Filename></Sermon><Sermon><SermonID>420141220235</SermonID><Title>Why
+        is the Resurrection of Christ So Important?</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Corinthians
+        15:14</BibleText><Date>2014-04-20T00:00:00</Date><DownloadCount>5</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/420141220235/420141220235.mp3</MP3Filename></Sermon><Sermon><SermonID>413142040445</SermonID><Title>Jeremiah''s
+        Time and Ours (Part 2)</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Jeremiah 20:1-18</BibleText><Date>2014-04-13T18:00:00</Date><DownloadCount>7</DownloadCount><MP3Duration>39
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/413142040445/413142040445.mp3</MP3Filename></Sermon><Sermon><SermonID>413141125151</SermonID><Title>The
+        Mystery of Gethsemane</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Mark 14:32-36</BibleText><Date>2014-04-13T00:00:00</Date><DownloadCount>5</DownloadCount><MP3Duration>42
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/413141125151/413141125151.mp3</MP3Filename></Sermon><Sermon><SermonID>4614103089</SermonID><Title>Behold
+        the Lamb of God Pt 2: His Power</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>John 1:29</BibleText><Date>2014-04-06T00:00:00</Date><DownloadCount>4</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/4614103089/4614103089.mp3</MP3Filename></Sermon><Sermon><SermonID>33014112560</SermonID><Title>Behold
+        the Lamb of God</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2014-03-30T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/33014112560/33014112560.mp3</MP3Filename></Sermon><Sermon><SermonID>323142044519</SermonID><Title>Jeremiah''s
+        Time and Ours (Part 1)</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Jeremiah 20:1-18</BibleText><Date>2014-03-23T18:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>48
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/323142044519/323142044519.mp3</MP3Filename></Sermon><Sermon><SermonID>323141054357</SermonID><Title>The
+        Purpose of the Church (Part 1)</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 2:4-8</BibleText><Date>2014-03-23T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/323141054357/323141054357.mp3</MP3Filename></Sermon><Sermon><SermonID>316142040254</SermonID><Title>Learning
+        from Christ in the Midst of the Storm</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>Luke 8:22-25</BibleText><Date>2014-03-16T18:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>51
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/316142040254/316142040254.mp3</MP3Filename></Sermon><Sermon><SermonID>316141235139</SermonID><Title>The
+        Picture of the Church</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 2:4-8</BibleText><Date>2014-03-16T00:00:00</Date><DownloadCount>4</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/316141235139/316141235139.mp3</MP3Filename></Sermon><Sermon><SermonID>39141942171</SermonID><Title>Overcoming
+        Depression Part 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Psalm 42; Psalm 43</BibleText><Date>2014-03-09T18:00:00</Date><DownloadCount>180</DownloadCount><MP3Duration>45
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/39141942171/39141942171.mp3</MP3Filename></Sermon><Sermon><SermonID>39141215302</SermonID><Title>Are
+        You Coming to Christ?</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 2:4</BibleText><Date>2014-03-09T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>62
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/39141215302/39141215302.mp3</MP3Filename></Sermon><Sermon><SermonID>32142035119</SermonID><Title>Overcoming
+        Depression Part 1</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Psalm 42; Psalm 43</BibleText><Date>2014-03-02T00:00:00</Date><DownloadCount>213</DownloadCount><MP3Duration>39
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/32142035119/32142035119.mp3</MP3Filename></Sermon><Sermon><SermonID>32141048379</SermonID><Title>Grow
+        Up!</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 2:1-3</BibleText><Date>2014-03-02T00:00:00</Date><DownloadCount>6</DownloadCount><MP3Duration>67
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/32141048379/32141048379.mp3</MP3Filename></Sermon><Sermon><SermonID>223141333482</SermonID><Title>The
+        Menace Of Worldliness</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 John 2:15-17; 1 John</BibleText><Date>2014-02-23T00:00:00</Date><DownloadCount>20</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/223141333482/223141333482.mp3</MP3Filename></Sermon><Sermon><SermonID>216142030491</SermonID><Title>The
+        Nature of Love Part 9 - Love Never Fails</Title><SubTitle>1 Corinthians 13</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1 Corinthians
+        13:8</BibleText><Date>2014-02-16T18:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>34
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/216142030491/216142030491.mp3</MP3Filename></Sermon><Sermon><SermonID>21614137240</SermonID><Title>The
+        Believers'' Call to Love (Part 2)</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1:22-25</BibleText><Date>2014-02-16T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/21614137240/21614137240.mp3</MP3Filename></Sermon><Sermon><SermonID>29142023575</SermonID><Title>The
+        Nature of Love Part 8 - Love Endures All Things</Title><SubTitle>1 Corinthians
+        13</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1
+        Corinthians 13:7</BibleText><Date>2014-02-09T18:00:00</Date><DownloadCount>18</DownloadCount><MP3Duration>36
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/29142023575/29142023575.mp3</MP3Filename></Sermon><Sermon><SermonID>29141147531</SermonID><Title>The
+        Believers'' Call to Love - Part 1</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1:22-25</BibleText><Date>2014-02-09T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/29141147531/29141147531.mp3</MP3Filename></Sermon><Sermon><SermonID>24141250361</SermonID><Title>Love
+        Bears All Things</Title><SubTitle>1 Corinthians 13</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1 Corinthians
+        13:7</BibleText><Date>2014-02-02T18:00:00</Date><DownloadCount>28</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/24141250361/24141250361.mp3</MP3Filename></Sermon><Sermon><SermonID>2214119278</SermonID><Title>Redeemed:
+        The Believer''s Motivation (Part 2)</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1:18-21</BibleText><Date>2014-02-02T00:00:00</Date><DownloadCount>7</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/2214119278/2214119278.mp3</MP3Filename></Sermon><Sermon><SermonID>12614141662</SermonID><Title>Redeemed:
+        The Believer''s Motivation (Part 1)</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1:18-21</BibleText><Date>2014-01-26T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12614141662/12614141662.mp3</MP3Filename></Sermon><Sermon><SermonID>119142032423</SermonID><Title>Love
+        Rejoices in the Truth</Title><SubTitle>1 Corinthians 13</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1 Corinthians
+        13:6</BibleText><Date>2014-01-19T18:00:00</Date><DownloadCount>19</DownloadCount><MP3Duration>36
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/119142032423/119142032423.mp3</MP3Filename></Sermon><Sermon><SermonID>119141326550</SermonID><Title>Ideal
+        Christian Living Part 3 - Living in the Fear of God</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1:17</BibleText><Date>2014-01-19T00:00:00</Date><DownloadCount>40</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/119141326550/119141326550.mp3</MP3Filename></Sermon><Sermon><SermonID>112142037284</SermonID><Title>Ideal
+        Christian Living - Part 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 1:13-16</BibleText><Date>2014-01-12T00:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/112142037284/112142037284.mp3</MP3Filename></Sermon><Sermon><SermonID>122313338251</SermonID><Title>The
+        Indescribable Gift</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>2 Corinthians 9:15; 2 Corinthians 9</BibleText><Date>2013-12-22T00:00:00</Date><DownloadCount>31</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/122313338251/122313338251.mp3</MP3Filename></Sermon><Sermon><SermonID>12151313560</SermonID><Title>The
+        Good News of Jesus'' Birth</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 2:8-14</BibleText><Date>2013-12-15T00:00:00</Date><DownloadCount>3</DownloadCount><MP3Duration>45
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12151313560/12151313560.mp3</MP3Filename></Sermon><Sermon><SermonID>1211131150276</SermonID><Title>The
+        Nature of Love (Part 3)</Title><SubTitle>1 Corinthians 13</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1 Corinthians
+        13:4</BibleText><Date>2013-12-08T18:00:00</Date><DownloadCount>18</DownloadCount><MP3Duration>39
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1211131150276/1211131150276.mp3</MP3Filename></Sermon><Sermon><SermonID>12813131960</SermonID><Title>Living
+        the Christian Life, Part 1</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1:13-16</BibleText><Date>2013-12-08T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12813131960/12813131960.mp3</MP3Filename></Sermon><Sermon><SermonID>12313016131</SermonID><Title>Nature
+        of God''s Love (Part 2)</Title><SubTitle>1 Corinthians 13</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1 Corinthians
+        13:4</BibleText><Date>2013-12-01T18:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>44
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12313016131/12313016131.mp3</MP3Filename></Sermon><Sermon><SermonID>1124131521338</SermonID><Title>God''s
+        Sovereign Mercy: The Basis of Thanksgiving</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Luke 10:21</BibleText><Date>2013-11-24T00:00:00</Date><DownloadCount>6</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1124131521338/1124131521338.mp3</MP3Filename></Sermon><Sermon><SermonID>1123132132152</SermonID><Title>The
+        Nature of Love (Part 1)</Title><SubTitle>1 Corinthians 13</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1 Corinthians
+        13:4</BibleText><Date>2013-11-17T18:00:00</Date><DownloadCount>27</DownloadCount><MP3Duration>48
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1123132132152/1123132132152.mp3</MP3Filename></Sermon><Sermon><SermonID>1123132039278</SermonID><Title>Believer''s
+        Joy</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 1:3-9</BibleText><Date>2013-11-17T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1123132039278/1123132039278.mp3</MP3Filename></Sermon><Sermon><SermonID>1117131524295</SermonID><Title>The
+        Greatest of These is Love</Title><SubTitle>1 Corinthians 13</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>1 Corinthians
+        13:1-3, 13</BibleText><Date>2013-11-10T18:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1117131524295/1117131524295.mp3</MP3Filename></Sermon><Sermon><SermonID>1031132124311</SermonID><Title>Faith
+        in Jesus Christ</Title><SubTitle /><Speaker>Charles Wilson</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Romans 3:21-26</BibleText><Date>2013-10-13T00:00:00</Date><DownloadCount>41</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1031132124311/1031132124311.mp3</MP3Filename></Sermon><Sermon><SermonID>1031132043356</SermonID><Title>A
+        Trinitarian Work</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Peter 1:1-2</BibleText><Date>2013-10-20T00:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1031132043356/1031132043356.mp3</MP3Filename></Sermon><Sermon><SermonID>1031131940227</SermonID><Title>The
+        Ten Virgins</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Matthew 25:1-13</BibleText><Date>2013-09-29T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1031131940227/1031131940227.mp3</MP3Filename></Sermon><Sermon><SermonID>101313014409</SermonID><Title>The
+        Prayer of the Righteous</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 5:16-18</BibleText><Date>2013-10-06T18:00:00</Date><DownloadCount>85</DownloadCount><MP3Duration>36
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/101313014409/101313014409.mp3</MP3Filename></Sermon><Sermon><SermonID>10131300386</SermonID><Title>First
+        Epistle of Peter: Introduction</Title><SubTitle>1 Peter</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1</BibleText><Date>2013-10-06T00:00:00</Date><DownloadCount>76</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10131300386/10131300386.mp3</MP3Filename></Sermon><Sermon><SermonID>1021300202</SermonID><Title>Don''t
+        Grieve the Spirit</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Ephesians 4:3</BibleText><Date>2013-09-22T00:00:00</Date><DownloadCount>100</DownloadCount><MP3Duration>45
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1021300202/1021300202.mp3</MP3Filename></Sermon><Sermon><SermonID>101132337481</SermonID><Title>The
+        Prescription for Divine Healing</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 5:13-15</BibleText><Date>2013-09-22T18:00:00</Date><DownloadCount>45</DownloadCount><MP3Duration>46
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/101132337481/101132337481.mp3</MP3Filename></Sermon><Sermon><SermonID>9211319133110</SermonID><Title>God
+        of All Seasons</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 5:13</BibleText><Date>2013-09-15T18:00:00</Date><DownloadCount>33</DownloadCount><MP3Duration>42
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/9211319133110/9211319133110.mp3</MP3Filename></Sermon><Sermon><SermonID>921131835380</SermonID><Title>Living
+        in the Spirit Part 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Galatians 5:16-18</BibleText><Date>2013-07-15T00:00:00</Date><DownloadCount>7</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/921131835380/921131835380.mp3</MP3Filename></Sermon><Sermon><SermonID>92131142583</SermonID><Title>Stop
+        Swearing Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 5:1</BibleText><Date>2013-09-01T18:00:00</Date><DownloadCount>19</DownloadCount><MP3Duration>43
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/92131142583/92131142583.mp3</MP3Filename></Sermon><Sermon><SermonID>91131111360</SermonID><Title>What
+        Did The Holy Spirit Produce At Pentecost?</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Acts 2:36-47;
+        Acts 2</BibleText><Date>2013-09-01T00:00:00</Date><DownloadCount>34</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/91131111360/91131111360.mp3</MP3Filename></Sermon><Sermon><SermonID>825131324358</SermonID><Title>The
+        Conditions For Being Filled With The Holy Spirit</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Ephesians 5:18;
+        Ephesians 5</BibleText><Date>2013-08-18T00:00:00</Date><DownloadCount>0</DownloadCount><MP3Duration
+        /><MP3Filename /></Sermon><Sermon><SermonID>82513137352</SermonID><Title>One
+        Master</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Matthew 6:24, Matthew 6</BibleText><Date>2013-08-25T00:00:00</Date><DownloadCount>49</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/82513137352/82513137352.mp3</MP3Filename></Sermon><Sermon><SermonID>728131330383</SermonID><Title>Will
+        You Not Revive Us Again Pt 1</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Psalm 85</BibleText><Date>2013-07-28T00:00:00</Date><DownloadCount>59</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/728131330383/728131330383.mp3</MP3Filename></Sermon><Sermon><SermonID>72113155551</SermonID><Title>Preparing
+        for True Revival</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Kings 8:3-40</BibleText><Date>2013-07-21T00:00:00</Date><DownloadCount>61</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/72113155551/72113155551.mp3</MP3Filename></Sermon><Sermon><SermonID>714131555574</SermonID><Title>Wickedness
+        Of Self-Indulgent Living Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 5:1-6; James 5</BibleText><Date>2013-07-14T18:00:00</Date><DownloadCount>45</DownloadCount><MP3Duration>32
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/714131555574/714131555574.mp3</MP3Filename></Sermon><Sermon><SermonID>71413134060</SermonID><Title>It''s
+        Time To Turn Back To The Lord</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>2 Chronicles 30:6-9; 2 Chronicles 30</BibleText><Date>2013-07-14T00:00:00</Date><DownloadCount>38</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/71413134060/71413134060.mp3</MP3Filename></Sermon><Sermon><SermonID>78131624710</SermonID><Title>Wickedness
+        Of Self Indulgence</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 5:1-6, James 5</BibleText><Date>2013-07-07T18:00:00</Date><DownloadCount>22</DownloadCount><MP3Duration>48
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/78131624710/78131624710.mp3</MP3Filename></Sermon><Sermon><SermonID>78131621527</SermonID><Title>A
+        Cry From Despair For Hope</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Psalm 80, Psalm</BibleText><Date>2013-07-07T00:00:00</Date><DownloadCount>28</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/78131621527/78131621527.mp3</MP3Filename></Sermon><Sermon><SermonID>78131617241</SermonID><Title>Jesus
+        Our Mediator</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Timothy 2, 1 Timothy</BibleText><Date>2013-06-30T00:00:00</Date><DownloadCount>17</DownloadCount><MP3Duration>63
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/78131617241/78131617241.mp3</MP3Filename></Sermon><Sermon><SermonID>78131611316</SermonID><Title>Living
+        Presumptuously</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4, james</BibleText><Date>2013-06-09T18:00:00</Date><DownloadCount>7</DownloadCount><MP3Duration>43
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/78131611316/78131611316.mp3</MP3Filename></Sermon><Sermon><SermonID>7813164559</SermonID><Title>How
+        God Pursues Us</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Jonah 1:10-17, Jonah 1</BibleText><Date>2013-06-09T00:00:00</Date><DownloadCount>5</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/7813164559/7813164559.mp3</MP3Filename></Sermon><Sermon><SermonID>6313103186</SermonID><Title>The
+        Sin Of Slandering Pt.2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4:11, James 4</BibleText><Date>2013-06-02T18:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>48
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/6313103186/6313103186.mp3</MP3Filename></Sermon><Sermon><SermonID>6313955429</SermonID><Title>Arrested
+        By God</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Jonah 1:10-17</BibleText><Date>2013-06-02T00:00:00</Date><DownloadCount>2</DownloadCount><MP3Duration>60
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/6313955429/6313955429.mp3</MP3Filename></Sermon><Sermon><SermonID>631395096</SermonID><Title>The
+        Sin Of Slandering</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4:11; James 4</BibleText><Date>2013-05-19T18:00:00</Date><DownloadCount>14</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/631395096/631395096.mp3</MP3Filename></Sermon><Sermon><SermonID>52613134481</SermonID><Title>Blessed
+        Are The Persecuted For Righteousness Sake Pt 3</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:10-12;
+        Matthew 5</BibleText><Date>2013-05-26T00:00:00</Date><DownloadCount>23</DownloadCount><MP3Duration>51
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/52613134481/52613134481.mp3</MP3Filename></Sermon><Sermon><SermonID>52613133510</SermonID><Title>Blessed
+        Are The Persecuted For Righteousness Sake Pt.2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:10-12,
+        Matthew 5</BibleText><Date>2013-05-19T00:00:00</Date><DownloadCount>0</DownloadCount><MP3Duration
+        /><MP3Filename /></Sermon><Sermon><SermonID>5121320081</SermonID><Title>Dead
+        To Sin, Alive In Christ</Title><SubTitle /><Speaker>Kevin Bridges</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Romans 6:1-4</BibleText><Date>2013-05-12T00:00:00</Date><DownloadCount>27</DownloadCount><MP3Duration>62
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/5121320081/5121320081.mp3</MP3Filename></Sermon><Sermon><SermonID>55131137573</SermonID><Title>Overcoming
+        The World Pt 4</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4:7-10; James 4</BibleText><Date>2013-05-05T18:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>28
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/55131137573/55131137573.mp3</MP3Filename></Sermon><Sermon><SermonID>55131117212</SermonID><Title>Blessed
+        Are The Persecuted For Righteousness Sake</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:10-12;
+        Matthew 5</BibleText><Date>2013-05-05T00:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>63
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/55131117212/55131117212.mp3</MP3Filename></Sermon><Sermon><SermonID>428131120526</SermonID><Title>Self-Examination
+        Test</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>2 Corinthians 13:5; 2 Corinthians 13</BibleText><Date>2013-04-28T00:00:00</Date><DownloadCount>21</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/428131120526/428131120526.mp3</MP3Filename></Sermon><Sermon><SermonID>428131118493</SermonID><Title>Overcoming
+        The World Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4:7-10</BibleText><Date>2013-04-21T18:00:00</Date><DownloadCount>4</DownloadCount><MP3Duration>36
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/428131118493/428131118493.mp3</MP3Filename></Sermon><Sermon><SermonID>428131116010</SermonID><Title>Blessed
+        Are The Peacemakers Pt 2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:9</BibleText><Date>2013-04-21T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/428131116010/428131116010.mp3</MP3Filename></Sermon><Sermon><SermonID>41813721340</SermonID><Title>Blessed
+        Are The Peacemakers</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:9,
+        Matthew</BibleText><Date>2013-04-14T00:00:00</Date><DownloadCount>35</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/41813721340/41813721340.mp3</MP3Filename></Sermon><Sermon><SermonID>47132232572</SermonID><Title>Blessed
+        Are The Pure In Heart Pt 3</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:8</BibleText><Date>2013-04-07T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>47
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/47132232572/47132232572.mp3</MP3Filename></Sermon><Sermon><SermonID>47132232381</SermonID><Title>The
+        Exalted Christ</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Philippians 2:9-11</BibleText><Date>2013-03-31T00:00:00</Date><DownloadCount>5</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/47132232381/47132232381.mp3</MP3Filename></Sermon><Sermon><SermonID>47132227305</SermonID><Title>Blessed
+        Are The Pure In Heart Pt 2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:8</BibleText><Date>2013-03-24T00:00:00</Date><DownloadCount>3</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/47132227305/47132227305.mp3</MP3Filename></Sermon><Sermon><SermonID>47132225503</SermonID><Title>Blessed
+        Are The Pure In Heart</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:8</BibleText><Date>2013-03-17T00:00:00</Date><DownloadCount>4</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/47132225503/47132225503.mp3</MP3Filename></Sermon><Sermon><SermonID>312131853299</SermonID><Title>Blessed
+        Are The Merciful Pt 2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:7</BibleText><Date>2013-03-10T00:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>41
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/312131853299/312131853299.mp3</MP3Filename></Sermon><Sermon><SermonID>33131720100</SermonID><Title>Blessed
+        Are The Merciful</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:7</BibleText><Date>2013-03-03T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/33131720100/33131720100.mp3</MP3Filename></Sermon><Sermon><SermonID>224131513185</SermonID><Title>Why
+        Do Sinners Oppose God?</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 11:14-26</BibleText><Date>2013-02-24T00:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>67
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/224131513185/224131513185.mp3</MP3Filename></Sermon><Sermon><SermonID>217131345203</SermonID><Title>Living
+        Selfishly Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4:1-3</BibleText><Date>2013-02-17T18:00:00</Date><DownloadCount>0</DownloadCount><MP3Duration
+        /><MP3Filename /></Sermon><Sermon><SermonID>217131344192</SermonID><Title>Hungering
+        And Thirsting For Righteousness Pt 3</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:6</BibleText><Date>2013-02-17T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/217131344192/217131344192.mp3</MP3Filename></Sermon><Sermon><SermonID>217131343440</SermonID><Title>Living
+        Selfishly Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4:1-3</BibleText><Date>2013-02-10T18:00:00</Date><DownloadCount>44</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/217131343440/217131343440.mp3</MP3Filename></Sermon><Sermon><SermonID>217131342219</SermonID><Title>Living
+        Selfishly</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 4:1-3</BibleText><Date>2013-02-03T18:00:00</Date><DownloadCount>30</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/217131342219/217131342219.mp3</MP3Filename></Sermon><Sermon><SermonID>210132129343</SermonID><Title>Hungering
+        And Thirsting For Righteousness Pt 2</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText /><Date>2013-02-10T00:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>60
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/210132129343/210132129343.mp3</MP3Filename></Sermon><Sermon><SermonID>23131343372</SermonID><Title>Hungering
+        And Thirsting For Righteousness</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:6;
+        Matthew 5</BibleText><Date>2013-02-03T00:00:00</Date><DownloadCount>17</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/23131343372/23131343372.mp3</MP3Filename></Sermon><Sermon><SermonID>127131258570</SermonID><Title>God''s
+        Sovereignty</Title><SubTitle /><Speaker>Josh Bryant</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Acts 16; Acts</BibleText><Date>2013-01-27T00:00:00</Date><DownloadCount>18</DownloadCount><MP3Duration>36
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/127131258570/127131258570.mp3</MP3Filename></Sermon><Sermon><SermonID>12213108264</SermonID><Title>Heavenly
+        Wisdom Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 3</BibleText><Date>2013-01-20T18:00:00</Date><DownloadCount>24</DownloadCount><MP3Duration>49
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12213108264/12213108264.mp3</MP3Filename></Sermon><Sermon><SermonID>12213105293</SermonID><Title>Blessed
+        Are The Meek Pt 3</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5</BibleText><Date>2013-01-20T00:00:00</Date><DownloadCount>6</DownloadCount><MP3Duration>78
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12213105293/12213105293.mp3</MP3Filename></Sermon><Sermon><SermonID>12213101272</SermonID><Title>Heavenly
+        Wisdom: It''s Characterization</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 3:16-18; James 3</BibleText><Date>2013-01-13T18:00:00</Date><DownloadCount>22</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12213101272/12213101272.mp3</MP3Filename></Sermon><Sermon><SermonID>12213958481</SermonID><Title>Blessed
+        Are The Meek Pt 2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:5;
+        Matthew 5</BibleText><Date>2013-01-13T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>68
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12213958481/12213958481.mp3</MP3Filename></Sermon><Sermon><SermonID>1221395593</SermonID><Title>Scripture
+        Memorization</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Psalm 119:11; Psalm 119</BibleText><Date>2013-01-06T18:00:00</Date><DownloadCount>34</DownloadCount><MP3Duration>43
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1221395593/1221395593.mp3</MP3Filename></Sermon><Sermon><SermonID>12213952150</SermonID><Title>Two
+        Paths Taken</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Psalm 1; Psalms</BibleText><Date>2013-01-06T00:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>65
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12213952150/12213952150.mp3</MP3Filename></Sermon><Sermon><SermonID>18139192410</SermonID><Title>What
+        About Tomorrow?</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Proverbs 27:1; Proverbs</BibleText><Date>2012-12-30T00:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/18139192410/18139192410.mp3</MP3Filename></Sermon><Sermon><SermonID>1223121610458</SermonID><Title>Who
+        Is The Baby In The Manger? Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 2:7-12; Colossians 1:15-20</BibleText><Date>2012-12-23T00:00:00</Date><DownloadCount>14</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1223121610458/1223121610458.mp3</MP3Filename></Sermon><Sermon><SermonID>1216122155432</SermonID><Title>Who
+        Is The Baby In The Manger? Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 2:7-12; Colossians 1:15-20</BibleText><Date>2012-12-16T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1216122155432/1216122155432.mp3</MP3Filename></Sermon><Sermon><SermonID>121012048120</SermonID><Title>Heavenly
+        Wisdom</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 3</BibleText><Date>2012-12-10T00:00:00</Date><DownloadCount>37</DownloadCount><MP3Duration>44
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/121012048120/121012048120.mp3</MP3Filename></Sermon><Sermon><SermonID>129121843455</SermonID><Title>Who
+        Is The Baby In The Manger?</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 2:7-12; Colossians 1:15-20</BibleText><Date>2012-12-09T00:00:00</Date><DownloadCount>37</DownloadCount><MP3Duration>66
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/129121843455/129121843455.mp3</MP3Filename></Sermon><Sermon><SermonID>123121225541</SermonID><Title>Contend
+        For The Faith</Title><SubTitle /><Speaker>Jim Bryant</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Jude 20</BibleText><Date>2012-10-28T00:00:00</Date><DownloadCount>24</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/123121225541/123121225541.mp3</MP3Filename></Sermon><Sermon><SermonID>1221216052</SermonID><Title>Blessed
+        Are The Meek</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Matthew 5</BibleText><Date>2012-12-02T00:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>62
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1221216052/1221216052.mp3</MP3Filename></Sermon><Sermon><SermonID>11251213123010</SermonID><Title>Blessed
+        Are Those Who Mourn Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-11-25T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/11251213123010/11251213123010.mp3</MP3Filename></Sermon><Sermon><SermonID>111912942460</SermonID><Title>Blessed
+        Are Those Who Mourn Pt 2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:4</BibleText><Date>2012-11-18T00:00:00</Date><DownloadCount>5</DownloadCount><MP3Duration>66
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/111912942460/111912942460.mp3</MP3Filename></Sermon><Sermon><SermonID>111112231640</SermonID><Title>Blessed
+        Are Those Who Mourn</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:4,
+        Matthew</BibleText><Date>2012-11-11T00:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>67
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/111112231640/111112231640.mp3</MP3Filename></Sermon><Sermon><SermonID>114121734183</SermonID><Title>How
+        To Trust God In Trying Times</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Devotional</EventType><BibleText>Habakkuk
+        1; Habakkuk</BibleText><Date>2012-11-04T00:00:00</Date><DownloadCount>48</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/114121734183/114121734183.mp3</MP3Filename></Sermon><Sermon><SermonID>1022121048350</SermonID><Title>Heavenly
+        Treasures</Title><SubTitle /><Speaker>Josh Bryant</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke</BibleText><Date>2012-10-21T00:00:00</Date><DownloadCount>40</DownloadCount><MP3Duration>41
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1022121048350/1022121048350.mp3</MP3Filename></Sermon><Sermon><SermonID>10151204286</SermonID><Title>The
+        Fickleness Of The Tongue</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 3; James</BibleText><Date>2012-10-14T00:00:00</Date><DownloadCount>22</DownloadCount><MP3Duration>37
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10151204286/10151204286.mp3</MP3Filename></Sermon><Sermon><SermonID>1014121326502</SermonID><Title>The
+        Poor In Spirit Pt 3</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:3</BibleText><Date>2012-10-14T00:00:00</Date><DownloadCount>6</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1014121326502/1014121326502.mp3</MP3Filename></Sermon><Sermon><SermonID>10712182350</SermonID><Title>The
+        Poor In Spirit Pt 2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:3-12</BibleText><Date>2012-10-07T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>63
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10712182350/10712182350.mp3</MP3Filename></Sermon><Sermon><SermonID>930121334415</SermonID><Title>The
+        Poor In Spirit</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:3</BibleText><Date>2012-09-30T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/930121334415/930121334415.mp3</MP3Filename></Sermon><Sermon><SermonID>927121016290</SermonID><Title>The
+        Tongue</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Exodus 5:2, Exodus</BibleText><Date>2012-09-23T18:00:00</Date><DownloadCount>23</DownloadCount><MP3Duration>34
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/927121016290/927121016290.mp3</MP3Filename></Sermon><Sermon><SermonID>927121014410</SermonID><Title>The
+        Beatitudes: An Introduction</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:3-12</BibleText><Date>2012-09-16T00:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>49
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/927121014410/927121014410.mp3</MP3Filename></Sermon><Sermon><SermonID>9231213232910</SermonID><Title>The
+        Beatitudes: An Introduction Pt2</Title><SubTitle>The Beatitudes</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Matthew 5:3-12</BibleText><Date>2012-09-23T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/9231213232910/9231213232910.mp3</MP3Filename></Sermon><Sermon><SermonID>99122144181</SermonID><Title>The
+        Tongue and The Teacher Pt.2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Exodus 5:2</BibleText><Date>2012-09-09T18:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>40
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/99122144181/99122144181.mp3</MP3Filename></Sermon><Sermon><SermonID>99121640338</SermonID><Title>The
+        Cure of I Will Not Pt 3: The Enabling Power of God</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText /><Date>2012-09-09T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/99121640338/99121640338.mp3</MP3Filename></Sermon><Sermon><SermonID>92121340507</SermonID><Title>The
+        Cure of I Will Not Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-09-02T00:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>68
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/92121340507/92121340507.mp3</MP3Filename></Sermon><Sermon><SermonID>826121331300</SermonID><Title>The
+        Cure of I Will Not</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Exodus 5:2</BibleText><Date>2012-08-26T00:00:00</Date><DownloadCount>17</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/826121331300/826121331300.mp3</MP3Filename></Sermon><Sermon><SermonID>8191213293510</SermonID><Title>The
+        Consequences Of I Will Not</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Exodus 5:2</BibleText><Date>2012-08-19T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>60
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/8191213293510/8191213293510.mp3</MP3Filename></Sermon><Sermon><SermonID>8131210062</SermonID><Title>Faith
+        &amp; Works Pt 4</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 2:14-26; James 2</BibleText><Date>2012-08-13T18:00:00</Date><DownloadCount>35</DownloadCount><MP3Duration>26
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/8131210062/8131210062.mp3</MP3Filename></Sermon><Sermon><SermonID>81312937146</SermonID><Title>What
+        It Is To Come To Christ</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-08-12T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/81312937146/81312937146.mp3</MP3Filename></Sermon><Sermon><SermonID>85121348206</SermonID><Title>The
+        Cause Of I Will Not</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Exodus</BibleText><Date>2012-08-05T00:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/85121348206/85121348206.mp3</MP3Filename></Sermon><Sermon><SermonID>85121347105</SermonID><Title>Regeneration
+        Or The New Creation</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>2 Corinthians 5:17; Titus 3:5</BibleText><Date>2012-07-29T00:00:00</Date><DownloadCount>90</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/85121347105/85121347105.mp3</MP3Filename></Sermon><Sermon><SermonID>72212223236</SermonID><Title>Faith
+        &amp; Works Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 2:14-26; James 2</BibleText><Date>2012-07-22T18:00:00</Date><DownloadCount>27</DownloadCount><MP3Duration>51
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/72212223236/72212223236.mp3</MP3Filename></Sermon><Sermon><SermonID>722122157272</SermonID><Title>The
+        Conclusion Of The Matter Pt 4</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-07-22T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>63
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/722122157272/722122157272.mp3</MP3Filename></Sermon><Sermon><SermonID>7161212924</SermonID><Title>Faith
+        &amp; Works</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 2:14-26</BibleText><Date>2012-07-16T00:00:00</Date><DownloadCount>70</DownloadCount><MP3Duration>47
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/7161212924/7161212924.mp3</MP3Filename></Sermon><Sermon><SermonID>715121541412</SermonID><Title>The
+        Conclusion Of The Matter Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-07-15T00:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/715121541412/715121541412.mp3</MP3Filename></Sermon><Sermon><SermonID>7812112081</SermonID><Title>The
+        Conclusion Of The Matter Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-07-08T00:00:00</Date><DownloadCount>19</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/7812112081/7812112081.mp3</MP3Filename></Sermon><Sermon><SermonID>7212125662</SermonID><Title>The
+        Royal Law</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 2</BibleText><Date>2012-07-02T00:00:00</Date><DownloadCount>26</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/7212125662/7212125662.mp3</MP3Filename></Sermon><Sermon><SermonID>7112133115</SermonID><Title>The
+        Conclusion Of The Matter</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-07-01T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/7112133115/7112133115.mp3</MP3Filename></Sermon><Sermon><SermonID>624121337267</SermonID><Title>Why
+        The Kingdom Of God Is A Mystery</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-06-24T00:00:00</Date><DownloadCount>29</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/624121337267/624121337267.mp3</MP3Filename></Sermon><Sermon><SermonID>617121128241</SermonID><Title>Lessons
+        In Being A Man</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Corinthians 9; 1 Corinthians</BibleText><Date>2012-06-17T00:00:00</Date><DownloadCount>34</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/617121128241/617121128241.mp3</MP3Filename></Sermon><Sermon><SermonID>610121131585</SermonID><Title>Lessons
+        To Live By Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 2</BibleText><Date>2012-06-10T18:00:00</Date><DownloadCount>0</DownloadCount><MP3Duration
+        /><MP3Filename /></Sermon><Sermon><SermonID>610121130432</SermonID><Title>A
+        Poor Man''s Wisdom</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-06-10T00:00:00</Date><DownloadCount>19</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/610121130432/610121130432.mp3</MP3Filename></Sermon><Sermon><SermonID>6312115227</SermonID><Title>Lessons
+        To Live By</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 2</BibleText><Date>2012-06-03T18:00:00</Date><DownloadCount>32</DownloadCount><MP3Duration>43
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/6312115227/6312115227.mp3</MP3Filename></Sermon><Sermon><SermonID>6312113126</SermonID><Title>Life
+        Under The Sun</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Ecclesiastes</BibleText><Date>2012-06-03T00:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/6312113126/6312113126.mp3</MP3Filename></Sermon><Sermon><SermonID>527121320415</SermonID><Title>Questions
+        About Assurance</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 John 5; 1 John</BibleText><Date>2012-05-27T00:00:00</Date><DownloadCount>44</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/527121320415/527121320415.mp3</MP3Filename></Sermon><Sermon><SermonID>52512101044</SermonID><Title>What
+        Is It In Life That I Desire?</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-05-25T00:00:00</Date><DownloadCount>18</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/52512101044/52512101044.mp3</MP3Filename></Sermon><Sermon><SermonID>513121613451</SermonID><Title>The
+        Sovereign''s Rights</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText /><Date>2012-05-06T18:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>44
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/513121613451/513121613451.mp3</MP3Filename></Sermon><Sermon><SermonID>51312169343</SermonID><Title>A
+        Mother God Honors</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Samuel</BibleText><Date>2012-05-13T00:00:00</Date><DownloadCount>22</DownloadCount><MP3Duration>61
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/51312169343/51312169343.mp3</MP3Filename></Sermon><Sermon><SermonID>57121329598</SermonID><Title>Are
+        You Growing Weary Of Worship?</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Micah 6:8</BibleText><Date>2012-05-06T00:00:00</Date><DownloadCount>36</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/57121329598/57121329598.mp3</MP3Filename></Sermon><Sermon><SermonID>429121054287</SermonID><Title>Back
+        To Bethel Pt.2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Genesis 35</BibleText><Date>2012-04-29T00:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/429121054287/429121054287.mp3</MP3Filename></Sermon><Sermon><SermonID>429121034511</SermonID><Title>Back
+        To Bethel</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Genesis</BibleText><Date>2012-04-22T00:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/429121034511/429121034511.mp3</MP3Filename></Sermon><Sermon><SermonID>415121337387</SermonID><Title>God''s
+        Faithfulness In Saving Sinners</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Timothy 1:12-17</BibleText><Date>2012-04-15T00:00:00</Date><DownloadCount>26</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/415121337387/415121337387.mp3</MP3Filename></Sermon><Sermon><SermonID>48121452250</SermonID><Title>Do
+        The Dead Live Again?</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Job 14:14; Job</BibleText><Date>2012-04-08T00:00:00</Date><DownloadCount>20</DownloadCount><MP3Duration>45
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/48121452250/48121452250.mp3</MP3Filename></Sermon><Sermon><SermonID>4112212544</SermonID><Title>The
+        Issue of Favoritism</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 2:1-4; James</BibleText><Date>2012-04-01T18:00:00</Date><DownloadCount>14</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/4112212544/4112212544.mp3</MP3Filename></Sermon><Sermon><SermonID>4112132616</SermonID><Title>The
+        Great Mystery Of Gethsemane</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 22:39-46</BibleText><Date>2012-04-01T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>46
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/4112132616/4112132616.mp3</MP3Filename></Sermon><Sermon><SermonID>32512112223</SermonID><Title>The
+        Compelling Love Of Christ</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>2 Corinthians 5:13-15; 2 Corinthians</BibleText><Date>2012-03-25T00:00:00</Date><DownloadCount>20</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/32512112223/32512112223.mp3</MP3Filename></Sermon><Sermon><SermonID>318121339533</SermonID><Title>Motives
+        To Repent: God''s Justice</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Psalm 51:4; Psalm</BibleText><Date>2012-03-18T00:00:00</Date><DownloadCount>28</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/318121339533/318121339533.mp3</MP3Filename></Sermon><Sermon><SermonID>31112105638</SermonID><Title>The
+        Doctrine Of Repentance: Motives to Repent Pt 3</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Psalm 51:4</BibleText><Date>2012-03-11T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>47
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/31112105638/31112105638.mp3</MP3Filename></Sermon><Sermon><SermonID>34121110400</SermonID><Title>The
+        Doctrine Of Repentance: Motives to Repent Pt 2</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Psalm 51:4</BibleText><Date>2012-03-04T00:00:00</Date><DownloadCount>26</DownloadCount><MP3Duration>60
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/34121110400/34121110400.mp3</MP3Filename></Sermon><Sermon><SermonID>226121126124</SermonID><Title>From
+        Bondage To Deliverance: Slaves To Sons</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Galatians 4:1-7</BibleText><Date>2012-02-26T00:00:00</Date><DownloadCount>23</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/226121126124/226121126124.mp3</MP3Filename></Sermon><Sermon><SermonID>2191211411</SermonID><Title>Practical
+        Ways To Bridle The Tongue Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 1:26</BibleText><Date>2012-02-19T18:00:00</Date><DownloadCount>22</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/2191211411/2191211411.mp3</MP3Filename></Sermon><Sermon><SermonID>219121112110</SermonID><Title>The
+        Doctrine Of Repentance: Motives to Repent</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Psalm 51:1-4</BibleText><Date>2012-02-19T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>57
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/219121112110/219121112110.mp3</MP3Filename></Sermon><Sermon><SermonID>212121358194</SermonID><Title>Practical
+        Ways To Bridle The Tongue Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 1:26</BibleText><Date>2012-02-12T18:00:00</Date><DownloadCount>20</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/212121358194/212121358194.mp3</MP3Filename></Sermon><Sermon><SermonID>212121344195</SermonID><Title>The
+        Necessity Of Repentance Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2012-02-12T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>66
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/212121344195/212121344195.mp3</MP3Filename></Sermon><Sermon><SermonID>26121546436</SermonID><Title>Practicle
+        Ways To Bridle The Tongue</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 1:26</BibleText><Date>2012-02-06T18:00:00</Date><DownloadCount>25</DownloadCount><MP3Duration>37
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/26121546436/26121546436.mp3</MP3Filename></Sermon><Sermon><SermonID>251213283910</SermonID><Title>The
+        Necessity Of Repentance</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 13:1-5</BibleText><Date>2012-02-05T00:00:00</Date><DownloadCount>31</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/251213283910/251213283910.mp3</MP3Filename></Sermon><Sermon><SermonID>2212316200</SermonID><Title>True
+        Sheep</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>John 10:27-28; John 10</BibleText><Date>2012-01-29T00:00:00</Date><DownloadCount>47</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/2212316200/2212316200.mp3</MP3Filename></Sermon><Sermon><SermonID>12212103490</SermonID><Title>The
+        Tongue: Our Measure of Faith Pt 8</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 1:26</BibleText><Date>2012-01-22T18:00:00</Date><DownloadCount>30</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12212103490/12212103490.mp3</MP3Filename></Sermon><Sermon><SermonID>12212955428</SermonID><Title>Abortion</Title><SubTitle
+        /><Speaker>Mitchell Jones</Speaker><EventType>Sunday Service</EventType><BibleText>James
+        4:2</BibleText><Date>2012-01-22T00:00:00</Date><DownloadCount>21</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/12212955428/12212955428.mp3</MP3Filename></Sermon><Sermon><SermonID>115121040301</SermonID><Title>The
+        Tongue: Our Measure of Faith 7</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 1:26</BibleText><Date>2012-01-15T18:00:00</Date><DownloadCount>25</DownloadCount><MP3Duration>43
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/115121040301/115121040301.mp3</MP3Filename></Sermon><Sermon><SermonID>115121037199</SermonID><Title>The
+        Nature of Repentance Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Isaiah 55:6-7</BibleText><Date>2012-01-15T00:00:00</Date><DownloadCount>14</DownloadCount><MP3Duration>62
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/115121037199/115121037199.mp3</MP3Filename></Sermon><Sermon><SermonID>18121044441</SermonID><Title>Little
+        Foxes</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>Song of Solomon</BibleText><Date>2012-01-08T18:00:00</Date><DownloadCount>0</DownloadCount><MP3Duration
+        /><MP3Filename /></Sermon><Sermon><SermonID>18121031345</SermonID><Title>True
+        Zeal</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Galatians 4:18</BibleText><Date>2012-01-08T00:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>48
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/18121031345/18121031345.mp3</MP3Filename></Sermon><Sermon><SermonID>1225111424517</SermonID><Title>The
+        Name Of Jesus</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Matthew 1:21</BibleText><Date>2011-12-25T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>52
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1225111424517/1225111424517.mp3</MP3Filename></Sermon><Sermon><SermonID>1218112342496</SermonID><Title>The
+        Littleness of Christmas</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Micah 5:2</BibleText><Date>2011-12-18T00:00:00</Date><DownloadCount>15</DownloadCount><MP3Duration>48
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1218112342496/1218112342496.mp3</MP3Filename></Sermon><Sermon><SermonID>1211111114555</SermonID><Title>Repentance:
+        The Neglected Doctrine Pt 6</Title><SubTitle>The Nature Of Repentance</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Proverbs 28:13;
+        1 John 1:8-10</BibleText><Date>2011-12-11T00:00:00</Date><DownloadCount>23</DownloadCount><MP3Duration>67
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1211111114555/1211111114555.mp3</MP3Filename></Sermon><Sermon><SermonID>124111821596</SermonID><Title>Repentance:
+        The Neglected Doctrine Pt 5</Title><SubTitle>The Nature Of Repentance</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Acts 26</BibleText><Date>2011-12-04T00:00:00</Date><DownloadCount>45</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/124111821596/124111821596.mp3</MP3Filename></Sermon><Sermon><SermonID>112711113664</SermonID><Title>The
+        Sinner''s Right View Of Self</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Luke 18:13-14, Luke</BibleText><Date>2011-11-27T00:00:00</Date><DownloadCount>29</DownloadCount><MP3Duration>55
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/112711113664/112711113664.mp3</MP3Filename></Sermon><Sermon><SermonID>1120111343433</SermonID><Title>Repentance:
+        The Neglected Doctrine Pt 4</Title><SubTitle>The Nature Of Repentance</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Acts 26:19-20</BibleText><Date>2011-11-20T00:00:00</Date><DownloadCount>41</DownloadCount><MP3Duration>62
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1120111343433/1120111343433.mp3</MP3Filename></Sermon><Sermon><SermonID>1113111111326</SermonID><Title>The
+        Tongue: Our Measure of Faith Pt 4</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 1:26</BibleText><Date>2011-11-13T18:00:00</Date><DownloadCount>16</DownloadCount><MP3Duration>33
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1113111111326/1113111111326.mp3</MP3Filename></Sermon><Sermon><SermonID>111311116222</SermonID><Title>Repentance:
+        The Neglected Doctrine Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Acts 26:13-20</BibleText><Date>2011-11-13T00:00:00</Date><DownloadCount>24</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/111311116222/111311116222.mp3</MP3Filename></Sermon><Sermon><SermonID>1161111429</SermonID><Title>The
+        Tongue: Our Measure of Faith Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 1:26</BibleText><Date>2011-11-06T18:00:00</Date><DownloadCount>28</DownloadCount><MP3Duration>27
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1161111429/1161111429.mp3</MP3Filename></Sermon><Sermon><SermonID>116111056402</SermonID><Title>Repentance:
+        The Neglected Doctrine Pt 2</Title><SubTitle>The Nature Of Repentance</SubTitle><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Acts 26:13-20</BibleText><Date>2011-11-06T00:00:00</Date><DownloadCount>72</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/116111056402/116111056402.mp3</MP3Filename></Sermon><Sermon><SermonID>103011118399</SermonID><Title>Repentance:
+        The Neglected Doctrine</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Mark 1:15, Mark</BibleText><Date>2011-10-30T00:00:00</Date><DownloadCount>40</DownloadCount><MP3Duration>63
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/103011118399/103011118399.mp3</MP3Filename></Sermon><Sermon><SermonID>102411015117</SermonID><Title>Resentment</Title><SubTitle
+        /><Speaker>Mitchell Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Jonah
+        4:1-11</BibleText><Date>2011-10-23T00:00:00</Date><DownloadCount>24</DownloadCount><MP3Duration>58
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/102411015117/102411015117.mp3</MP3Filename></Sermon><Sermon><SermonID>1023112344360</SermonID><Title>The
+        Tongue: Our Measure of Faith Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 2:26</BibleText><Date>2011-10-23T18:00:00</Date><DownloadCount>28</DownloadCount><MP3Duration>36
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1023112344360/1023112344360.mp3</MP3Filename></Sermon><Sermon><SermonID>101611104228</SermonID><Title>The
+        Tongue: Our Measure of Faith</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James 2:26</BibleText><Date>2011-10-16T18:00:00</Date><DownloadCount>38</DownloadCount><MP3Duration>40
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/101611104228/101611104228.mp3</MP3Filename></Sermon><Sermon><SermonID>10161110085</SermonID><Title>The
+        Family Of Faith</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews 11:39-40</BibleText><Date>2011-10-16T00:00:00</Date><DownloadCount>29</DownloadCount><MP3Duration>49
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10161110085/10161110085.mp3</MP3Filename></Sermon><Sermon><SermonID>10911103241</SermonID><Title>Are
+        You Merely A Listener Or A Doer Of The Word?</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday - PM</EventType><BibleText>James 2:22-25</BibleText><Date>2011-10-09T18:00:00</Date><DownloadCount>18</DownloadCount><MP3Duration>45
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10911103241/10911103241.mp3</MP3Filename></Sermon><Sermon><SermonID>10911954118</SermonID><Title>Faith
+        That Conquers: The Diversity of Faith''s Operation</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Hebrews 11:32-40</BibleText><Date>2011-10-09T00:00:00</Date><DownloadCount>7</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10911954118/10911954118.mp3</MP3Filename></Sermon><Sermon><SermonID>10211111100</SermonID><Title>God''s
+        Gift of the Perfect Law of Liberty</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2011-10-02T00:00:00</Date><DownloadCount>22</DownloadCount><MP3Duration>37
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10211111100/10211111100.mp3</MP3Filename></Sermon><Sermon><SermonID>1021110534710</SermonID><Title>Rahab''s
+        Faith</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews 11:31</BibleText><Date>2011-10-02T00:00:00</Date><DownloadCount>21</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1021110534710/1021110534710.mp3</MP3Filename></Sermon><Sermon><SermonID>925111029189</SermonID><Title>The
+        Danger Of Drifting</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews 2:1-4; Hebrews</BibleText><Date>2011-09-25T00:00:00</Date><DownloadCount>74</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/925111029189/925111029189.mp3</MP3Filename></Sermon><Sermon><SermonID>918112348198</SermonID><Title>The
+        Righteous Life Pt 4</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 1:19-21</BibleText><Date>2011-09-18T00:00:00</Date><DownloadCount>12</DownloadCount><MP3Duration>44
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/918112348198/918112348198.mp3</MP3Filename></Sermon><Sermon><SermonID>9181111338</SermonID><Title>The
+        Courage Of Faith: Faith At The Walls Of Jericho</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Hebrews 11:30</BibleText><Date>2011-09-18T00:00:00</Date><DownloadCount>18</DownloadCount><MP3Duration>50
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/9181111338/9181111338.mp3</MP3Filename></Sermon><Sermon><SermonID>911111019484</SermonID><Title>The
+        Righteous Life Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 1:19-21</BibleText><Date>2011-09-11T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>43
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/911111019484/911111019484.mp3</MP3Filename></Sermon><Sermon><SermonID>91111101653</SermonID><Title>Faith
+        In God''s Promise Or Presumption That Destroys</Title><SubTitle /><Speaker>Mitchell
+        Jones</Speaker><EventType>Sunday Service</EventType><BibleText>Hebrews 11:29</BibleText><Date>2011-09-11T00:00:00</Date><DownloadCount>23</DownloadCount><MP3Duration>60
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/91111101653/91111101653.mp3</MP3Filename></Sermon><Sermon><SermonID>9611195572</SermonID><Title>Faith
+        In God''s Provision</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews 11</BibleText><Date>2011-09-06T00:00:00</Date><DownloadCount>40</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/9611195572/9611195572.mp3</MP3Filename></Sermon><Sermon><SermonID>828111024326</SermonID><Title>The
+        Cost Of Following Christ</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2011-08-28T00:00:00</Date><DownloadCount>13</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/828111024326/828111024326.mp3</MP3Filename></Sermon><Sermon><SermonID>82111945195</SermonID><Title>The
+        Righteous Man: Be Slow To Speak</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2011-08-21T00:00:00</Date><DownloadCount>19</DownloadCount><MP3Duration>44
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/82111945195/82111945195.mp3</MP3Filename></Sermon><Sermon><SermonID>82111940141</SermonID><Title>The
+        Choices Of Faith Pt 4</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews 11</BibleText><Date>2011-08-21T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>67
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/82111940141/82111940141.mp3</MP3Filename></Sermon><Sermon><SermonID>815112333313</SermonID><Title>The
+        Perplexity Of Providence</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Kings; 1 Kings 17</BibleText><Date>2011-08-15T00:00:00</Date><DownloadCount>53</DownloadCount><MP3Duration>46
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/815112333313/815112333313.mp3</MP3Filename></Sermon><Sermon><SermonID>815112331202</SermonID><Title>The
+        Test Of Faith</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>1 Kings; 1 Kings 17</BibleText><Date>2011-08-15T00:00:00</Date><DownloadCount>94</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/815112331202/815112331202.mp3</MP3Filename></Sermon><Sermon><SermonID>87112151278</SermonID><Title>Humility</Title><SubTitle
+        /><Speaker>Pastor Tim Goad</Speaker><EventType>Sunday Service</EventType><BibleText
+        /><Date>2011-08-07T00:00:00</Date><DownloadCount>27</DownloadCount><MP3Duration>49
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/87112151278/87112151278.mp3</MP3Filename></Sermon><Sermon><SermonID>724111113494</SermonID><Title>Just
+        As It Was In The Days Of Noah Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Genesis 6</BibleText><Date>2011-07-24T00:00:00</Date><DownloadCount>29</DownloadCount><MP3Duration>76
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/724111113494/724111113494.mp3</MP3Filename></Sermon><Sermon><SermonID>717111042577</SermonID><Title>Just
+        As It Was In The Days Of Noah Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Genesis 6; Genesis</BibleText><Date>2011-07-17T00:00:00</Date><DownloadCount>67</DownloadCount><MP3Duration>66
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/717111042577/717111042577.mp3</MP3Filename></Sermon><Sermon><SermonID>7101111626</SermonID><Title>This
+        Is My Comfort</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText /><Date>2011-07-10T00:00:00</Date><DownloadCount>0</DownloadCount><MP3Duration
+        /><MP3Filename /></Sermon><Sermon><SermonID>710111028462</SermonID><Title>This
+        Is My Comfort</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Psalm 119:50; Psalm</BibleText><Date>2011-07-10T00:00:00</Date><DownloadCount>19</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/710111028462/710111028462.mp3</MP3Filename></Sermon><Sermon><SermonID>710111026281</SermonID><Title>Just
+        As It Was In The Days Of Noah</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Genesis 6</BibleText><Date>2011-07-10T00:00:00</Date><DownloadCount>47</DownloadCount><MP3Duration>59
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/710111026281/710111026281.mp3</MP3Filename></Sermon><Sermon><SermonID>73111433193</SermonID><Title>God''s
+        Witness Through The Church</Title><SubTitle /><Speaker>Jim Bryant</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Colossians 1</BibleText><Date>2011-07-03T00:00:00</Date><DownloadCount>30</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/73111433193/73111433193.mp3</MP3Filename></Sermon><Sermon><SermonID>7311110120</SermonID><Title>The
+        Worst Kind Of Forgetfulness</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>2 Chronicles 32:24-26</BibleText><Date>2011-06-26T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>67
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/7311110120/7311110120.mp3</MP3Filename></Sermon><Sermon><SermonID>61911133100</SermonID><Title>Husbands,
+        Love Your Wives</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Ephesians 5:25-30</BibleText><Date>2011-06-19T00:00:00</Date><DownloadCount>88</DownloadCount><MP3Duration>54
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/61911133100/61911133100.mp3</MP3Filename></Sermon><Sermon><SermonID>612111029272</SermonID><Title>Living
+        The Righteous Life</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 1:19-21</BibleText><Date>2011-06-12T00:00:00</Date><DownloadCount>9</DownloadCount><MP3Duration>38
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/612111029272/612111029272.mp3</MP3Filename></Sermon><Sermon><SermonID>612111025321</SermonID><Title>The
+        Choices Of Faith Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews 11:23-29</BibleText><Date>2011-06-12T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/612111025321/612111025321.mp3</MP3Filename></Sermon><Sermon><SermonID>6711956152</SermonID><Title>The
+        Father Up Above Pt 3</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>James 1:16-18, ESV</BibleText><Date>2011-06-05T00:00:00</Date><DownloadCount>8</DownloadCount><MP3Duration>41
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/6711956152/6711956152.mp3</MP3Filename></Sermon><Sermon><SermonID>65111341342</SermonID><Title>The
+        Choices Of Faith Pt 2</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews 11:23-29</BibleText><Date>2011-06-05T00:00:00</Date><DownloadCount>11</DownloadCount><MP3Duration>66
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/65111341342/65111341342.mp3</MP3Filename></Sermon><Sermon><SermonID>5291195475</SermonID><Title>What
+        Will You Be Known For?</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Matthew 6; Matthew 7</BibleText><Date>2011-05-29T00:00:00</Date><DownloadCount>10</DownloadCount><MP3Duration>53
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/5291195475/5291195475.mp3</MP3Filename></Sermon><Sermon><SermonID>52211133988</SermonID><Title>The
+        Choices Of Faith</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        Service</EventType><BibleText>Hebrews</BibleText><Date>2011-05-22T00:00:00</Date><DownloadCount>34</DownloadCount><MP3Duration>56
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/52211133988/52211133988.mp3</MP3Filename></Sermon><Sermon><SermonID>515112033250</SermonID><Title>The
+        God Up Above</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - PM</EventType><BibleText>James</BibleText><Date>2011-05-15T18:00:00</Date><DownloadCount>18</DownloadCount><MP3Duration>33
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/515112033250/515112033250.mp3</MP3Filename></Sermon><Sermon><SermonID>515111348415</SermonID><Title>A
+        Faith To Die With</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
+        - AM</EventType><BibleText>Hebrews</BibleText><Date>2011-05-15T11:00:00</Date><DownloadCount>62</DownloadCount><MP3Duration>64
+        minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/515111348415/515111348415.mp3</MP3Filename></Sermon></SermonListResult></SermonListResponse></soap:Body></soap:Envelope>'
+    http_version: 
+  recorded_at: Wed, 23 Jul 2014 17:50:30 GMT
+recorded_with: VCR 2.9.2
