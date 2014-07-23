@@ -94,6 +94,22 @@ SermonAudio.get_event_types
 #  ....
 ```
 
+### `#get_languages`
+
+```ruby
+SermonAudio.get_languages
+# => ["Afrikaans",
+#  "Arabic",
+#  "Burundi",
+#  "Catalan",
+#  "Chinese",
+#  "Choctaw",
+#  "Czech",
+#  "Danish",
+#  "Dutch",
+#  ....
+```
+
 ### `#sermon_list`
 
 ```ruby

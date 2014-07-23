@@ -25,6 +25,11 @@ module SermonAudio
       response[:string] || []
     end
 
+    def get_languages
+      response = execute_call(__callee__)
+      response[:string] || []
+    end
+
     def get_speakers_by_keyword(word)
       response = execute_call(__callee__, 'Keyword' => word)
       response[:string] || []

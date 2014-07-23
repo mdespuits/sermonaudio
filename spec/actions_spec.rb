@@ -4,6 +4,17 @@ module SermonAudio
   describe Actions do
     subject(:action) { Class.new.extend(Actions) }
 
+    CURRENT_SA_LANGS = %w[
+      Afrikaans Arabic Burundi Catalan Chinese
+      Choctaw Czech Danish Dutch Finnish
+      French German Greek Haitian-Creole Hebrew
+      Hindi Hungarian Indonesian Italian Japanese
+      Khmer Korean Mongolian Persian Portuguese
+      Punjabi Romanian Russian Scots-Gaelic Sign-ASL
+      Sign-Mexico Spanish Tagalog Tamil Telugu
+      Ukrainian Urdu Vietnamese Zulu
+    ]
+
     describe '#sermon_list' do
       it "should return a list of sermons for the specified church", vcr: true do
         result = action.sermon_list(:cbcelgin)
@@ -59,7 +70,14 @@ module SermonAudio
       end
     end
 
-    describe '#get_event_types' do
+    describe '#get_languages' do
+      it "should return the correct results", vcr: true do
+        result = action.get_languages
+        expect(result.sort).to eq CURRENT_SA_LANGS.sort
+      end
+    end
+
+    describe '#get_speakers_by_keyword' do
       it "should return a larger set of results", vcr: true do
         result = action.get_speakers_by_keyword("Mitchell")
         expect(result.count).to be > 30
