@@ -44,5 +44,19 @@ module SermonAudio
       end
     end
 
+    describe '#get_event_types' do
+      it "should return a larger set of results", vcr: true do
+        result = action.get_speakers_by_keyword("Mitchell")
+        expect(result.count).to be > 30
+        expect(result).to include "Mitchell Jones"
+        expect(result).to include "Timothy Mitchell"
+      end
+
+      it "should return a single result", vcr: true do
+        result = action.get_speakers_by_keyword("Mitchell Jones")
+        expect(result).to eq "Mitchell Jones"
+      end
+    end
+
   end
 end

@@ -47,6 +47,25 @@ SermonAudio.get_speakers_by_member_id(member_id)
 #  "Charles Wilson"]
 ```
 
+### `#get_speakers_by_keyword`
+
+```ruby
+SermonAudio.get_speakers_by_keyword("Mitchell")
+# => ["Mitchell Buck",
+#  "Mitchell Dees",
+#  "Rev. Mitchell C. Dick",
+#  "Mitchell Gali",
+#  "Mitchell Jones",
+#  "Mitchell Mahan",
+#  "Esther McMitchell",
+#  "Rev. Ben Mitchell",
+#  "Benjamin Mitchell",
+#  "Billy Mitchell",
+
+SermonAudio.get_speakers_by_keyword("Mitchell Jones")
+# => "Mitchell Jones"
+```
+
 ### `#get_series_by_member_id`
 
 ```ruby
