@@ -25,6 +25,11 @@ module SermonAudio
       response[:string] || []
     end
 
+    def newest_sermons_by_member_id(member_id)
+      response = execute_call(__callee__, 'MemberID' => member_id)
+      response[:sermon] || []
+    end
+
     def get_event_types
       response = execute_call(__callee__)
       response[:string] || []

@@ -67,6 +67,21 @@ module SermonAudio
       end
     end
 
+    describe '#newest_sermons_by_member_id' do
+      it "should return the correct results", vcr: true do
+        result = action.newest_sermons_by_member_id(:cbcelgin)
+        expect(result[0][:sermon_id]).to eq "720141933368"
+        expect(result[0][:title]).to eq "Facing Death"
+        expect(result[0][:sub_title]).to eq "Psalm 23"
+        expect(result[0][:speaker]).to eq "Mitchell Jones"
+        expect(result[0][:event_type]).to eq "Sunday - PM"
+        expect(result[0][:bible_text]).to eq "Psalm 23:4"
+        expect(result[0][:download_count]).to eq "9"
+        expect(result[0][:mp3_duration]).to eq "39 minutes"
+        expect(result[0][:mp3_filename]).to eq "http://mp3.sa-media.com/filearea/720141933368/720141933368.mp3"
+      end
+    end
+
     describe '#get_event_types' do
       it "should return the correct results", vcr: true do
         result = action.get_event_types
