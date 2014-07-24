@@ -137,6 +137,28 @@ SermonAudio.newest_sermons_by_member_id(:cbcelgin)
 #   :speaker=>"Mitchell Jones",
 #   ....
 ```
+
+### `#newest_sermons_by_speaker`
+
+```ruby
+SermonAudio.newest_sermons_by_speaker("Mitchell Jones")
+# => [{:sermon_id=>"720141933368",
+#   :title=>"Facing Death",
+#   :sub_title=>"Psalm 23",
+#   :speaker=>"Mitchell Jones",
+#   :event_type=>"Sunday - PM",
+#   :bible_text=>"Psalm 23:4",
+#   :date=>#<DateTime: 2014-07-20T18:00:00+00:00 ((2456859j,64800s,0n),+0s,2299161j)>,
+#   :download_count=>"9",
+#   :mp3_duration=>"39 minutes",
+#   :mp3_filename=>"http://mp3.sa-media.com/filearea/720141933368/720141933368.mp3"},
+#  {:sermon_id=>"720141118528",
+#   :title=>"How to Trust God in Trying Times",
+#   :sub_title=>nil,
+#   :speaker=>"Mitchell Jones",
+#   ....
+```
+
 ### `#sermon_list`
 
 ```ruby
