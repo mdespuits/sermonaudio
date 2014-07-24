@@ -14,30 +14,15 @@ module SermonAudio
     end
 
     def favorite_sermons
-      config = Configuration.new
-      response = execute_call(__callee__,
-                              'MemberID' => config.member_id,
-                              'Password' => config.password
-                 )
-      array_wrap(response[:sermon]).compact
+      get_favorite(__callee__, within_namespace: :sermon)
     end
 
     def favorite_speakers
-      config = Configuration.new
-      response = execute_call(__callee__,
-                              'MemberID' => config.member_id,
-                              'Password' => config.password
-                 )
-      array_wrap(response[:speaker]).compact
+      get_favorite(__callee__, within_namespace: :speaker)
     end
 
     def favorite_broadcasters
-      config = Configuration.new
-      response = execute_call(__callee__,
-                              'MemberID' => config.member_id,
-                              'Password' => config.password
-                 )
-      array_wrap(response[:member]).compact
+      get_favorite(__callee__, within_namespace: :member)
     end
 
     def get_series_by_member_id(member_id)
@@ -94,6 +79,15 @@ module SermonAudio
 
     def array_wrap(obj)
       obj.is_a?(Hash) ? [obj] : Array(obj)
+    end
+
+    def get_favorite(action, opts = {})
+      config = Configuration.new
+      response = execute_call(action,
+                              'MemberID' => config.member_id,
+                              'Password' => config.password
+                 )
+      array_wrap(response[opts.fetch(:within_namespace)]).compact
     end
   end
 end
