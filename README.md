@@ -59,6 +59,16 @@ SermonAudio.favorite_speakers
 #  {:speaker_name=>"Mitchell Jones", :sort_name=>"Jones, Mitchell", :counter=>"216"}]
 ```
 
+### `#favorite_broadcasters`
+
+```ruby
+SermonAudio.favorite_broadcasters
+# => [{:source_id=>"cbcelgin",
+#   :source_desc=>"Cornerstone Baptist Church",
+#   :source_location=>"Elgin, Texas",
+#   :minister=>"Pastor Mitchell Jones"}]
+```
+
 ### `#get_speakers_by_member_id`
 
 ```ruby

@@ -63,6 +63,16 @@ module SermonAudio
       end
     end
 
+    describe '#favorite_broadcasters' do
+      it "should return the correct result", vcr: true do
+        result = action.favorite_broadcasters
+        expect(result[0][:source_id]).to eq "cbcelgin"
+        expect(result[0][:source_desc]).to eq "Cornerstone Baptist Church"
+        expect(result[0][:source_location]).to eq "Elgin, Texas"
+        expect(result[0][:minister]).to eq "Pastor Mitchell Jones"
+      end
+    end
+
     describe '#get_speakers_by_member_id' do
       it "should return the correct results", vcr: true do
         result = action.get_speakers_by_member_id(:cbcelgin)

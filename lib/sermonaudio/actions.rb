@@ -31,6 +31,15 @@ module SermonAudio
       array_wrap(response[:speaker]).compact
     end
 
+    def favorite_broadcasters
+      config = Configuration.new
+      response = execute_call(__callee__,
+                              'MemberID' => config.member_id,
+                              'Password' => config.password
+                 )
+      array_wrap(response[:member]).compact
+    end
+
     def get_series_by_member_id(member_id)
       response = execute_call(__callee__, 'MemberID' => member_id)
       response[:string] || []
