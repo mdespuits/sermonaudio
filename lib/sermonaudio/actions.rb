@@ -5,10 +5,9 @@ module SermonAudio
   # retrieve data from sermonaudio.com
   module Actions
     def get_sermon_info(sermon_id)
-      config = Configuration.new
       execute_call(__callee__,
-                   'MemberID' => config.member_id,
-                   'Password' => config.password,
+                   'MemberID' => SermonAudio.member_id,
+                   'Password' => SermonAudio.password,
                    'SermonID' => sermon_id
       )
     end
@@ -82,10 +81,9 @@ module SermonAudio
     end
 
     def get_favorite(action, opts = {})
-      config = Configuration.new
       response = execute_call(action,
-                              'MemberID' => config.member_id,
-                              'Password' => config.password
+                              'MemberID' => SermonAudio.member_id,
+                              'Password' => SermonAudio.password
                  )
       array_wrap(response[opts.fetch(:within_namespace)]).compact
     end

@@ -13,4 +13,5 @@ require 'sermonaudio/finder'
 
 module SermonAudio
   extend Actions
+  include Configuration
 end
