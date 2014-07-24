@@ -2,7 +2,11 @@ require 'spec_helper'
 
 module SermonAudio
   describe Configuration do
-    subject { Class.new.include(Configuration) }
+    subject {
+      Class.new do
+        include(Configuration)
+      end
+    }
 
     it "should allow for member_id and password to be set" do
       expect(subject).to respond_to :member_id
