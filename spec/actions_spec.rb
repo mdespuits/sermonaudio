@@ -55,6 +55,14 @@ module SermonAudio
       end
     end
 
+    describe '#favorite_speakers' do
+      it "should return the correct result", vcr: true do
+        result = action.favorite_speakers
+        expect(result[0]).to eq({speaker_name: "Pastor Tim Goad", sort_name: "Goad, Tim", counter: "470"})
+        expect(result[1]).to eq({speaker_name: "Mitchell Jones", sort_name: "Jones, Mitchell", counter: "216"})
+      end
+    end
+
     describe '#get_speakers_by_member_id' do
       it "should return the correct results", vcr: true do
         result = action.get_speakers_by_member_id(:cbcelgin)

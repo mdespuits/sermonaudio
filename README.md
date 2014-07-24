@@ -51,6 +51,14 @@ SermonAudio.favorite_sermons
 #   :mp3_filename=>nil}]
 ```
 
+### `#favorite_speakers`
+
+```ruby
+SermonAudio.favorite_speakers
+# [{:speaker_name=>"Pastor Tim Goad", :sort_name=>"Goad, Tim", :counter=>"470"},
+#  {:speaker_name=>"Mitchell Jones", :sort_name=>"Jones, Mitchell", :counter=>"216"}]
+```
+
 ### `#get_speakers_by_member_id`
 
 ```ruby
