@@ -35,6 +35,22 @@ SermonAudio.get_sermon_info(sermon_id)
 #}
 ```
 
+### `#favorite_sermons`
+
+```ruby
+SermonAudio.favorite_sermons
+# => [{:sermon_id=>"7101111626",
+#   :title=>"This Is My Comfort",
+#   :sub_title=>nil,
+#   :speaker=>"Mitchell Jones",
+#   :event_type=>"Sunday Service",
+#   :bible_text=>nil,
+#   :date=>#<DateTime: 2011-07-10T00:00:00+00:00 ((2455753j,0s,0n),+0s,2299161j)>,
+#   :download_count=>"0",
+#   :mp3_duration=>nil,
+#   :mp3_filename=>nil}]
+```
+
 ### `#get_speakers_by_member_id`
 
 ```ruby

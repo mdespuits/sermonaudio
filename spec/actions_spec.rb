@@ -40,6 +40,21 @@ module SermonAudio
       end
     end
 
+    describe '#favorite_sermons' do
+      it "should return the correct result", vcr: true do
+        result = action.favorite_sermons
+        expect(result[0][:sermon_id]).to eq "7101111626"
+        expect(result[0][:title]).to eq "This Is My Comfort"
+        expect(result[0][:sub_title]).to eq nil
+        expect(result[0][:speaker]).to eq "Mitchell Jones"
+        expect(result[0][:event_type]).to eq "Sunday Service"
+        expect(result[0][:bible_text]).to eq nil
+        expect(result[0][:download_count]).to eq "0"
+        expect(result[0][:mp3_duration]).to eq nil
+        expect(result[0][:mp3_filename]).to eq nil
+      end
+    end
+
     describe '#get_speakers_by_member_id' do
       it "should return the correct results", vcr: true do
         result = action.get_speakers_by_member_id(:cbcelgin)

@@ -1,13 +1,25 @@
+require 'sermonaudio/configuration'
+
 module SermonAudio
   # Actions that the SermonAudio module can call to
   # retrieve data from sermonaudio.com
   module Actions
     def get_sermon_info(sermon_id)
+      config = Configuration.new
       execute_call(__callee__,
-                   'MemberID' => ENV['SERMONAUDIO_MEMBER_ID'],
-                   'Password' => ENV['SERMONAUDIO_PASSWORD'],
+                   'MemberID' => config.member_id,
+                   'Password' => config.password,
                    'SermonID' => sermon_id
       )
+    end
+
+    def favorite_sermons
+      config = Configuration.new
+      response = execute_call(__callee__,
+                              'MemberID' => config.member_id,
+                              'Password' => config.password
+                 )
+      array_wrap(response[:sermon]).compact
     end
 
     def get_series_by_member_id(member_id)
@@ -60,6 +72,10 @@ module SermonAudio
     def execute_call(name, opts = {})
       response = SermonAudio.client.call(name, message: opts)
       response.body[:"#{name}_response"][:"#{name}_result"]
+    end
+
+    def array_wrap(obj)
+      obj.is_a?(Hash) ? [obj] : Array(obj)
     end
   end
 end
