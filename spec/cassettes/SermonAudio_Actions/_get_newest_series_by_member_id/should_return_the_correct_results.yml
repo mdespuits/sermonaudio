@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Wed, 23 Jul 2014 20:16:57 GMT
+      - Thu, 24 Jul 2014 16:37:58 GMT
       Content-Length:
       - '3386'
     body:
@@ -455,7 +455,7 @@ http_interactions:
         \     <soap12:address location=\"http://web4.sa-media.com/SASoapAPI/service.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Wed, 23 Jul 2014 20:17:01 GMT
+  recorded_at: Thu, 24 Jul 2014 16:38:03 GMT
 - request:
     method: post
     uri: http://web4.sa-media.com/SASoapAPI/service.asmx
@@ -463,7 +463,7 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.sermonaudio.com/"
-        xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Body><tns:GetNewestSeriesByMemberID><tns:MemberID><SA_MEMBER_ID></tns:MemberID></tns:GetNewestSeriesByMemberID></env:Body></env:Envelope>
+        xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Body><tns:GetNewestSeriesByMemberID><tns:MemberID>cbcelgin</tns:MemberID></tns:GetNewestSeriesByMemberID></env:Body></env:Envelope>
     headers:
       Soapaction:
       - '"http://www.sermonaudio.com/GetNewestSeriesByMemberID"'
@@ -493,7 +493,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Wed, 23 Jul 2014 20:16:57 GMT
+      - Thu, 24 Jul 2014 16:37:59 GMT
       Content-Length:
       - '572'
     body:
@@ -504,5 +504,5 @@ http_interactions:
         23</string><string>1 Peter</string><string>1 Corinthians 13</string><string>The
         Beatitudes</string><string>The Nature Of Repentance</string></GetNewestSeriesByMemberIDResult></GetNewestSeriesByMemberIDResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Wed, 23 Jul 2014 20:17:01 GMT
+  recorded_at: Thu, 24 Jul 2014 16:38:04 GMT
 recorded_with: VCR 2.9.2

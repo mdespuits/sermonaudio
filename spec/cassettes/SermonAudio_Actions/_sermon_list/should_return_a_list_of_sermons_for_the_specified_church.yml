@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Wed, 23 Jul 2014 17:50:24 GMT
+      - Thu, 24 Jul 2014 16:37:59 GMT
       Content-Length:
       - '3386'
     body:
@@ -455,7 +455,7 @@ http_interactions:
         \     <soap12:address location=\"http://web4.sa-media.com/SASoapAPI/service.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Wed, 23 Jul 2014 17:50:30 GMT
+  recorded_at: Thu, 24 Jul 2014 16:38:04 GMT
 - request:
     method: post
     uri: http://web4.sa-media.com/SASoapAPI/service.asmx
@@ -463,7 +463,7 @@ http_interactions:
       encoding: UTF-8
       string: <?xml version="1.0" encoding="UTF-8"?><env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://www.sermonaudio.com/"
-        xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Body><tns:SermonList><tns:MemberID><SA_MEMBER_ID></tns:MemberID></tns:SermonList></env:Body></env:Envelope>
+        xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Body><tns:SermonList><tns:MemberID>cbcelgin</tns:MemberID></tns:SermonList></env:Body></env:Envelope>
     headers:
       Soapaction:
       - '"http://www.sermonaudio.com/SermonList"'
@@ -493,7 +493,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Wed, 23 Jul 2014 17:50:24 GMT
+      - Thu, 24 Jul 2014 16:37:59 GMT
       Content-Length:
       - '89356'
     body:
@@ -677,7 +677,7 @@ http_interactions:
         Jones</Speaker><EventType>Sunday Service</EventType><BibleText>1 Peter 1</BibleText><Date>2013-10-06T00:00:00</Date><DownloadCount>76</DownloadCount><MP3Duration>50
         minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/10131300386/10131300386.mp3</MP3Filename></Sermon><Sermon><SermonID>1021300202</SermonID><Title>Don''t
         Grieve the Spirit</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
-        Service</EventType><BibleText>Ephesians 4:3</BibleText><Date>2013-09-22T00:00:00</Date><DownloadCount>100</DownloadCount><MP3Duration>45
+        Service</EventType><BibleText>Ephesians 4:3</BibleText><Date>2013-09-22T00:00:00</Date><DownloadCount>101</DownloadCount><MP3Duration>45
         minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/1021300202/1021300202.mp3</MP3Filename></Sermon><Sermon><SermonID>101132337481</SermonID><Title>The
         Prescription for Divine Healing</Title><SubTitle /><Speaker>Mitchell Jones</Speaker><EventType>Sunday
         - PM</EventType><BibleText>James 5:13-15</BibleText><Date>2013-09-22T18:00:00</Date><DownloadCount>45</DownloadCount><MP3Duration>46
@@ -1185,5 +1185,5 @@ http_interactions:
         - AM</EventType><BibleText>Hebrews</BibleText><Date>2011-05-15T11:00:00</Date><DownloadCount>62</DownloadCount><MP3Duration>64
         minutes</MP3Duration><MP3Filename>http://mp3.sa-media.com/filearea/515111348415/515111348415.mp3</MP3Filename></Sermon></SermonListResult></SermonListResponse></soap:Body></soap:Envelope>'
     http_version: 
-  recorded_at: Wed, 23 Jul 2014 17:50:30 GMT
+  recorded_at: Thu, 24 Jul 2014 16:38:04 GMT
 recorded_with: VCR 2.9.2

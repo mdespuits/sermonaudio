@@ -31,7 +31,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Wed, 23 Jul 2014 20:11:39 GMT
+      - Thu, 24 Jul 2014 16:37:54 GMT
       Content-Length:
       - '3386'
     body:
@@ -455,7 +455,7 @@ http_interactions:
         \     <soap12:address location=\"http://web4.sa-media.com/SASoapAPI/service.asmx\"
         />\r\n    </wsdl:port>\r\n  </wsdl:service>\r\n</wsdl:definitions>"
     http_version: 
-  recorded_at: Wed, 23 Jul 2014 20:11:42 GMT
+  recorded_at: Thu, 24 Jul 2014 16:38:00 GMT
 - request:
     method: post
     uri: http://web4.sa-media.com/SASoapAPI/service.asmx
@@ -493,7 +493,7 @@ http_interactions:
       X-Powered-By:
       - ASP.NET
       Date:
-      - Wed, 23 Jul 2014 20:11:40 GMT
+      - Thu, 24 Jul 2014 16:37:57 GMT
       Content-Length:
       - '1313'
     body:
@@ -502,5 +502,5 @@ http_interactions:
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><GetLanguagesResponse
         xmlns="http://www.sermonaudio.com/"><GetLanguagesResult><string>Afrikaans</string><string>Arabic</string><string>Burundi</string><string>Catalan</string><string>Chinese</string><string>Choctaw</string><string>Czech</string><string>Danish</string><string>Dutch</string><string>Finnish</string><string>French</string><string>German</string><string>Greek</string><string>Haitian-Creole</string><string>Hebrew</string><string>Hindi</string><string>Hungarian</string><string>Indonesian</string><string>Italian</string><string>Japanese</string><string>Khmer</string><string>Korean</string><string>Mongolian</string><string>Persian</string><string>Portuguese</string><string>Punjabi</string><string>Romanian</string><string>Russian</string><string>Scots-Gaelic</string><string>Sign-ASL</string><string>Sign-Mexico</string><string>Spanish</string><string>Tagalog</string><string>Tamil</string><string>Telugu</string><string>Ukrainian</string><string>Urdu</string><string>Vietnamese</string><string>Zulu</string></GetLanguagesResult></GetLanguagesResponse></soap:Body></soap:Envelope>
     http_version: 
-  recorded_at: Wed, 23 Jul 2014 20:11:44 GMT
+  recorded_at: Thu, 24 Jul 2014 16:38:02 GMT
 recorded_with: VCR 2.9.2
