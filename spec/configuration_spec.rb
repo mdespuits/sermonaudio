@@ -29,8 +29,8 @@ module SermonAudio
 
     it "should raise and error if no values are set" do
       env("SERMONAUDIO_MEMBER_ID" => nil, "SERMONAUDIO_PASSWORD" => nil) do
-        expect { subject.member_id }.to raise_error KeyError
-        expect { subject.password }.to raise_error KeyError
+        expect { subject.member_id }.to raise_error Configuration::MissingConfiguration
+        expect { subject.password }.to raise_error Configuration::MissingConfiguration
       end
     end
   end
