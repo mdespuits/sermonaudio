@@ -1,3 +1,5 @@
+require 'savon'
+
 module SermonAudio
   module_function
 
