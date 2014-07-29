@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Matt Bridges"]
   s.email       = ["mbridges.91@gmail.com"]
   s.homepage    = "https://github.com/mattdbridges/sermonaudio"
-  s.summary     = %q{interface the SermonAudio API easily.}
+  s.summary     = %q{SermonAudio API interface for Ruby.}
   s.description = %q{sermonaudio uses the Savon gem to interface with SermonAudio as easily as possible.}
 
   s.rubyforge_project = s.name
