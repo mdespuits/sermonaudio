@@ -5,5 +5,5 @@ require 'sermonaudio/actions'
 
 module SermonAudio
   extend Actions
-  include Configuration
+  extend Configuration
 end

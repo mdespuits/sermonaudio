@@ -4,7 +4,7 @@ module SermonAudio
   describe Configuration do
     subject {
       Class.new do
-        include(Configuration)
+        extend(Configuration)
       end
     }
 
