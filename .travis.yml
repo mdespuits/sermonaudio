@@ -3,6 +3,8 @@ rvm:
   - 1.9.3
   - 2.0.0
   - 2.1
+  - jruby-19mode
+  - rbx-x
 env: SERMONAUDIO_MEMBER_ID=example SERMONAUDIO_PASSWORD=example
 before_install:
   - gem install nokogiri -v 1.6.2.1 -- --use-system-libraries
