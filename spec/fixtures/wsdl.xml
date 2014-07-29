@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.sermonaudio.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.sermonaudio.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.sermonaudio.com/">
+      <s:element name="GetSeriesByMemberID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSeriesByMemberIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSeriesByMemberIDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNewestSeriesByMemberID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewestSeriesByMemberIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewestSeriesByMemberIDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeakersByMemberID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeakersByMemberIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSpeakersByMemberIDResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeakersByKeyword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Keyword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSpeakersByKeywordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSpeakersByKeywordResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEventTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventTypesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLanguages">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLanguagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLanguagesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitSermon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DatePreached" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Speaker" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BibleText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keywords" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MoreInfoText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitSermonResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitSermonResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSermon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SermonID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DatePreached" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Speaker" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BibleText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Keywords" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MoreInfoText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSermonResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SermonList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Item" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SermonListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SermonListResult" type="tns:ArrayOfSermon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSermon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Sermon" nillable="true" type="tns:Sermon" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Sermon">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SermonID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Speaker" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BibleText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DownloadCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MP3Duration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MP3Filename" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="NewestSermonsByMemberID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewestSermonsByMemberIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewestSermonsByMemberIDResult" type="tns:ArrayOfSermon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewestSermonsBySpeaker">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SpeakerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NewestSermonsBySpeakerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NewestSermonsBySpeakerResult" type="tns:ArrayOfSermon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FavoriteSermons">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FavoriteSermonsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FavoriteSermonsResult" type="tns:ArrayOfSermon" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FavoriteBroadcasters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FavoriteBroadcastersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FavoriteBroadcastersResult" type="tns:ArrayOfMember" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMember">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Member" nillable="true" type="tns:Member" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Member">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SourceID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SourceDesc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SourceLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Minister" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FavoriteSpeakers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FavoriteSpeakersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FavoriteSpeakersResult" type="tns:ArrayOfSpeaker" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSpeaker">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Speaker" nillable="true" type="tns:Speaker" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Speaker">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SpeakerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SortName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Counter" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetSermonInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MemberID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SermonID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSermonInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSermonInfoResult" type="tns:SermonSingle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SermonSingle">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SermonID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Speaker" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BibleText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DownloadCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="MP3Duration" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MP3Filename" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Keywords" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MoreInfoText" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetSeriesByMemberIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSeriesByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="GetSeriesByMemberIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSeriesByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewestSeriesByMemberIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewestSeriesByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="GetNewestSeriesByMemberIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewestSeriesByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeakersByMemberIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSpeakersByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeakersByMemberIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSpeakersByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeakersByKeywordSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSpeakersByKeyword" />
+  </wsdl:message>
+  <wsdl:message name="GetSpeakersByKeywordSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSpeakersByKeywordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetEventTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLanguages" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLanguagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSermonSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitSermon" />
+  </wsdl:message>
+  <wsdl:message name="SubmitSermonSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitSermonResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSermonSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSermon" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSermonSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSermonResponse" />
+  </wsdl:message>
+  <wsdl:message name="SermonListSoapIn">
+    <wsdl:part name="parameters" element="tns:SermonList" />
+  </wsdl:message>
+  <wsdl:message name="SermonListSoapOut">
+    <wsdl:part name="parameters" element="tns:SermonListResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewestSermonsByMemberIDSoapIn">
+    <wsdl:part name="parameters" element="tns:NewestSermonsByMemberID" />
+  </wsdl:message>
+  <wsdl:message name="NewestSermonsByMemberIDSoapOut">
+    <wsdl:part name="parameters" element="tns:NewestSermonsByMemberIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="NewestSermonsBySpeakerSoapIn">
+    <wsdl:part name="parameters" element="tns:NewestSermonsBySpeaker" />
+  </wsdl:message>
+  <wsdl:message name="NewestSermonsBySpeakerSoapOut">
+    <wsdl:part name="parameters" element="tns:NewestSermonsBySpeakerResponse" />
+  </wsdl:message>
+  <wsdl:message name="FavoriteSermonsSoapIn">
+    <wsdl:part name="parameters" element="tns:FavoriteSermons" />
+  </wsdl:message>
+  <wsdl:message name="FavoriteSermonsSoapOut">
+    <wsdl:part name="parameters" element="tns:FavoriteSermonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FavoriteBroadcastersSoapIn">
+    <wsdl:part name="parameters" element="tns:FavoriteBroadcasters" />
+  </wsdl:message>
+  <wsdl:message name="FavoriteBroadcastersSoapOut">
+    <wsdl:part name="parameters" element="tns:FavoriteBroadcastersResponse" />
+  </wsdl:message>
+  <wsdl:message name="FavoriteSpeakersSoapIn">
+    <wsdl:part name="parameters" element="tns:FavoriteSpeakers" />
+  </wsdl:message>
+  <wsdl:message name="FavoriteSpeakersSoapOut">
+    <wsdl:part name="parameters" element="tns:FavoriteSpeakersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSermonInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSermonInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSermonInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSermonInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GetSeriesByMemberID">
+      <wsdl:input message="tns:GetSeriesByMemberIDSoapIn" />
+      <wsdl:output message="tns:GetSeriesByMemberIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewestSeriesByMemberID">
+      <wsdl:input message="tns:GetNewestSeriesByMemberIDSoapIn" />
+      <wsdl:output message="tns:GetNewestSeriesByMemberIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeakersByMemberID">
+      <wsdl:input message="tns:GetSpeakersByMemberIDSoapIn" />
+      <wsdl:output message="tns:GetSpeakersByMemberIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeakersByKeyword">
+      <wsdl:input message="tns:GetSpeakersByKeywordSoapIn" />
+      <wsdl:output message="tns:GetSpeakersByKeywordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventTypes">
+      <wsdl:input message="tns:GetEventTypesSoapIn" />
+      <wsdl:output message="tns:GetEventTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguages">
+      <wsdl:input message="tns:GetLanguagesSoapIn" />
+      <wsdl:output message="tns:GetLanguagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSermon">
+      <wsdl:input message="tns:SubmitSermonSoapIn" />
+      <wsdl:output message="tns:SubmitSermonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSermon">
+      <wsdl:input message="tns:UpdateSermonSoapIn" />
+      <wsdl:output message="tns:UpdateSermonSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SermonList">
+      <wsdl:input message="tns:SermonListSoapIn" />
+      <wsdl:output message="tns:SermonListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewestSermonsByMemberID">
+      <wsdl:input message="tns:NewestSermonsByMemberIDSoapIn" />
+      <wsdl:output message="tns:NewestSermonsByMemberIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="NewestSermonsBySpeaker">
+      <wsdl:input message="tns:NewestSermonsBySpeakerSoapIn" />
+      <wsdl:output message="tns:NewestSermonsBySpeakerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteSermons">
+      <wsdl:input message="tns:FavoriteSermonsSoapIn" />
+      <wsdl:output message="tns:FavoriteSermonsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteBroadcasters">
+      <wsdl:input message="tns:FavoriteBroadcastersSoapIn" />
+      <wsdl:output message="tns:FavoriteBroadcastersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteSpeakers">
+      <wsdl:input message="tns:FavoriteSpeakersSoapIn" />
+      <wsdl:output message="tns:FavoriteSpeakersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSermonInfo">
+      <wsdl:input message="tns:GetSermonInfoSoapIn" />
+      <wsdl:output message="tns:GetSermonInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSeriesByMemberID">
+      <soap:operation soapAction="http://www.sermonaudio.com/GetSeriesByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewestSeriesByMemberID">
+      <soap:operation soapAction="http://www.sermonaudio.com/GetNewestSeriesByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeakersByMemberID">
+      <soap:operation soapAction="http://www.sermonaudio.com/GetSpeakersByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeakersByKeyword">
+      <soap:operation soapAction="http://www.sermonaudio.com/GetSpeakersByKeyword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventTypes">
+      <soap:operation soapAction="http://www.sermonaudio.com/GetEventTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguages">
+      <soap:operation soapAction="http://www.sermonaudio.com/GetLanguages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSermon">
+      <soap:operation soapAction="http://www.sermonaudio.com/SubmitSermon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSermon">
+      <soap:operation soapAction="http://www.sermonaudio.com/UpdateSermon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SermonList">
+      <soap:operation soapAction="http://www.sermonaudio.com/SermonList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewestSermonsByMemberID">
+      <soap:operation soapAction="http://www.sermonaudio.com/NewestSermonsByMemberID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewestSermonsBySpeaker">
+      <soap:operation soapAction="http://www.sermonaudio.com/NewestSermonsBySpeaker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteSermons">
+      <soap:operation soapAction="http://www.sermonaudio.com/FavoriteSermons" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteBroadcasters">
+      <soap:operation soapAction="http://www.sermonaudio.com/FavoriteBroadcasters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteSpeakers">
+      <soap:operation soapAction="http://www.sermonaudio.com/FavoriteSpeakers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSermonInfo">
+      <soap:operation soapAction="http://www.sermonaudio.com/GetSermonInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSeriesByMemberID">
+      <soap12:operation soapAction="http://www.sermonaudio.com/GetSeriesByMemberID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewestSeriesByMemberID">
+      <soap12:operation soapAction="http://www.sermonaudio.com/GetNewestSeriesByMemberID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeakersByMemberID">
+      <soap12:operation soapAction="http://www.sermonaudio.com/GetSpeakersByMemberID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpeakersByKeyword">
+      <soap12:operation soapAction="http://www.sermonaudio.com/GetSpeakersByKeyword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventTypes">
+      <soap12:operation soapAction="http://www.sermonaudio.com/GetEventTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguages">
+      <soap12:operation soapAction="http://www.sermonaudio.com/GetLanguages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitSermon">
+      <soap12:operation soapAction="http://www.sermonaudio.com/SubmitSermon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSermon">
+      <soap12:operation soapAction="http://www.sermonaudio.com/UpdateSermon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SermonList">
+      <soap12:operation soapAction="http://www.sermonaudio.com/SermonList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewestSermonsByMemberID">
+      <soap12:operation soapAction="http://www.sermonaudio.com/NewestSermonsByMemberID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewestSermonsBySpeaker">
+      <soap12:operation soapAction="http://www.sermonaudio.com/NewestSermonsBySpeaker" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteSermons">
+      <soap12:operation soapAction="http://www.sermonaudio.com/FavoriteSermons" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteBroadcasters">
+      <soap12:operation soapAction="http://www.sermonaudio.com/FavoriteBroadcasters" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FavoriteSpeakers">
+      <soap12:operation soapAction="http://www.sermonaudio.com/FavoriteSpeakers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSermonInfo">
+      <soap12:operation soapAction="http://www.sermonaudio.com/GetSermonInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://web4.sa-media.com/SASoapAPI/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://web4.sa-media.com/SASoapAPI/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

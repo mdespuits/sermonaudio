@@ -4,6 +4,10 @@ module SermonAudio
   # Actions that the SermonAudio module can call to
   # retrieve data from sermonaudio.com
   module Actions
+    def submit_sermon(info)
+      execute_call(__callee__, info)
+    end
+
     def get_sermon_info(sermon_id)
       execute_call(__callee__,
                    'MemberID' => SermonAudio.member_id,

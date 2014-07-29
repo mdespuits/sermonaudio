@@ -19,6 +19,27 @@ Then run bundle to install it:
 
 ## General Use
 
+### `#submit_sermon`
+
+```ruby
+info = {
+  'MemberID' => 'cbcelgin',
+  'Password' => 'password',
+  'Title' => 'Example Sermon',
+  'ShortTitle' => 'Even Shorter',
+  'SubTitle' => 'Series Name',
+  'EventType' => 'Sunday Service',
+  'DatePreached' => DateTime.new(2014, 7, 24),
+  'Speaker' => 'Mitchell Jones',
+  'BibleText' => '1 Peter 2:21-25',
+  'Language' => 'English',
+  'Keywords' => 'bible jesus gospel',
+  'MoreInfoText' => 'This is more info about the sermon'
+}
+SermonAudio.submit_sermon(info)
+# => "70812308178"
+```
+
 ### `#get_sermon_info`
 
 ```ruby

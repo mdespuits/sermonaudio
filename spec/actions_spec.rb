@@ -1,7 +1,10 @@
 require 'spec_helper'
+require 'savon/mock/spec_helper'
 
 module SermonAudio
   describe Actions do
+    include Savon::SpecHelper
+
     subject(:action) { Class.new.extend(Actions) }
 
     CURRENT_SA_LANGS = %w[
@@ -14,6 +17,43 @@ module SermonAudio
       Sign-Mexico Spanish Tagalog Tamil Telugu
       Ukrainian Urdu Vietnamese Zulu
     ]
+
+    describe '#submit_sermon' do
+      before(:all) { savon.mock! }
+      after(:all)  { savon.unmock! }
+
+      before do
+        allow(SermonAudio).to receive(:client) do
+          Savon.client {
+            wsdl 'spec/fixtures/wsdl.xml'
+            soap_version 2
+          }
+        end
+      end
+
+      it "should send the correct message and return the expected results" do
+        info = {
+          'MemberID' => 'cbcelgin',
+          'Password' => 'password',
+          'Title' => 'Example Sermon',
+          'ShortTitle' => 'Even Shorter',
+          'SubTitle' => 'Series Name',
+          'EventType' => 'Sunday Service',
+          'DatePreached' => DateTime.new(2014, 7, 24),
+          'Speaker' => 'Mitchell Jones',
+          'BibleText' => '1 Peter 2:21-25',
+          'Language' => 'English',
+          'Keywords' => 'bible jesus gospel',
+          'MoreInfoText' => 'This is more info about the sermon'
+        }
+
+        fixture = File.read('spec/fixtures/submit_sermon.xml')
+        savon.expects(:submit_sermon).with(message: info).returns fixture
+
+        result = action.submit_sermon(info)
+        expect(result).to eq "Response Value"
+      end
+    end
 
     describe '#sermon_list' do
       it "should return a list of sermons for the specified church", vcr: true do
