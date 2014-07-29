@@ -79,8 +79,8 @@ module SermonAudio
 
     private
 
-    def execute_call(name, opts = {})
-      response = SermonAudio.client.call(name, message: opts)
+    def execute_call(name, message = {})
+      response = SermonAudio.client.call(name, message: message)
       response.body[:"#{name}_response"][:"#{name}_result"]
     end
 
