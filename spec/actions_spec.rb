@@ -18,7 +18,8 @@ module SermonAudio
       Ukrainian Urdu Vietnamese Zulu
     ]
 
-    describe '#submit_sermon' do
+    describe 'stubbed expectations'  do
+
       before(:all) { savon.mock! }
       after(:all)  { savon.unmock! }
 
@@ -31,28 +32,57 @@ module SermonAudio
         end
       end
 
-      it "should send the correct message and return the expected results" do
-        info = {
-          'MemberID' => 'cbcelgin',
-          'Password' => 'password',
-          'Title' => 'Example Sermon',
-          'ShortTitle' => 'Even Shorter',
-          'SubTitle' => 'Series Name',
-          'EventType' => 'Sunday Service',
-          'DatePreached' => DateTime.new(2014, 7, 24),
-          'Speaker' => 'Mitchell Jones',
-          'BibleText' => '1 Peter 2:21-25',
-          'Language' => 'English',
-          'Keywords' => 'bible jesus gospel',
-          'MoreInfoText' => 'This is more info about the sermon'
-        }
+      describe '#submit_sermon' do
+        it "should send the correct message and return the expected results" do
+          info = {
+            'MemberID' => 'cbcelgin',
+            'Password' => 'password',
+            'Title' => 'Example Sermon',
+            'ShortTitle' => 'Even Shorter',
+            'SubTitle' => 'Series Name',
+            'EventType' => 'Sunday Service',
+            'DatePreached' => DateTime.new(2014, 7, 24),
+            'Speaker' => 'Mitchell Jones',
+            'BibleText' => '1 Peter 2:21-25',
+            'Language' => 'English',
+            'Keywords' => 'bible jesus gospel',
+            'MoreInfoText' => 'This is more info about the sermon'
+          }
 
-        fixture = File.read('spec/fixtures/submit_sermon.xml')
-        savon.expects(:submit_sermon).with(message: info).returns fixture
+          fixture = File.read('spec/fixtures/submit_sermon.xml')
+          savon.expects(:submit_sermon).with(message: info).returns fixture
 
-        result = action.submit_sermon(info)
-        expect(result).to eq "Response Value"
+          result = action.submit_sermon(info)
+          expect(result).to eq "Response Value"
+        end
       end
+
+      describe '#update_sermon' do
+        it "should send the correct message and return the expected results" do
+          info = {
+            'MemberID' => 'cbcelgin',
+            'Password' => 'password',
+            'SermonID' => '9827374839872',
+            'Title' => 'Example Sermon',
+            'ShortTitle' => 'Even Shorter',
+            'SubTitle' => 'Series Name',
+            'EventType' => 'Sunday Service',
+            'DatePreached' => DateTime.new(2014, 7, 24),
+            'Speaker' => 'Mitchell Jones',
+            'BibleText' => '1 Peter 2:21-25',
+            'Language' => 'English',
+            'Keywords' => 'bible jesus gospel',
+            'MoreInfoText' => 'This is more info about the sermon'
+          }
+
+          fixture = File.read('spec/fixtures/update_sermon.xml')
+          savon.expects(:update_sermon).with(message: info).returns fixture
+
+          result = action.update_sermon(info)
+          expect(result).to eq nil
+        end
+      end
+
     end
 
     describe '#sermon_list' do

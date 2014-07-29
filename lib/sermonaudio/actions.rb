@@ -8,6 +8,10 @@ module SermonAudio
       execute_call(__callee__, info)
     end
 
+    def update_sermon(info)
+      execute_call(__callee__, info)
+    end
+
     def get_sermon_info(sermon_id)
       execute_call(__callee__,
                    'MemberID' => SermonAudio.member_id,
