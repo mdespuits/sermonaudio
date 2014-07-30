@@ -62,6 +62,6 @@ module SermonAudio
         MSG
         fail MissingConfiguration, message
       end
-      end
+    end
   end
 end
