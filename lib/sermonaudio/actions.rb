@@ -6,17 +6,15 @@ module SermonAudio
   module Actions
     def convert_sermon_hash(data)
       data.each_with_object({}) do |(key, value), memo|
-        memo[convert_key.call(key)] = value
+        memo[convert_key(key)] = value
       end
     end
 
-    def convert_key
-      lambda do |key|
-        return key if key.is_a? String
-        key.to_s.split('_')
-           .map { |v| v.downcase == 'id' ? v.upcase : v.capitalize }
-           .join
-      end
+    def convert_key(key)
+      return key if key.is_a? String
+      key.to_s.split('_')
+         .map { |v| v.downcase == 'id' ? v.upcase : v.capitalize }
+         .join
     end
 
     def submit_sermon(info)

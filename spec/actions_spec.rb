@@ -27,7 +27,7 @@ module SermonAudio
         "SermonText" => "SermonText"
       }
       expectations.each_pair do |original, result|
-        expect( action.convert_key.call(original) ).to eq result
+        expect( action.convert_key(original) ).to eq result
       end
     end
 
