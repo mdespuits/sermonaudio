@@ -34,15 +34,15 @@ module SermonAudio
     end
 
     def favorite_sermons
-      get_favorite(__callee__, within_namespace: :sermon)
+      get_favorite(__callee__, within: :sermon)
     end
 
     def favorite_speakers
-      get_favorite(__callee__, within_namespace: :speaker)
+      get_favorite(__callee__, within: :speaker)
     end
 
     def favorite_broadcasters
-      get_favorite(__callee__, within_namespace: :member)
+      get_favorite(__callee__, within: :member)
     end
 
     def get_series_by_member_id(member_id)
@@ -106,7 +106,7 @@ module SermonAudio
                               'MemberID' => SermonAudio.member_id,
                               'Password' => SermonAudio.password
                  )
-      array_wrap(response[opts.fetch(:within_namespace)]).compact
+      array_wrap(response[opts.fetch(:within)]).compact
     end
   end
 end
