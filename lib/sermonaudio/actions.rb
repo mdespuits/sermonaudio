@@ -4,6 +4,21 @@ module SermonAudio
   # Actions that the SermonAudio module can call to
   # retrieve data from sermonaudio.com
   module Actions
+    def convert_sermon_hash(data)
+      data.each_with_object({}) do |(key, value), memo|
+        memo[convert_key.call(key)] = value
+      end
+    end
+
+    def convert_key
+      lambda do |key|
+        return key if key.is_a? String
+        key.to_s.split('_')
+           .map { |v| v.downcase == 'id' ? v.upcase : v.capitalize }
+           .join
+      end
+    end
+
     def submit_sermon(info)
       execute_call(__callee__, info)
     end
