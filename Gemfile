@@ -5,6 +5,7 @@ source "http://rubygems.org"
 group :development do
   gem 'ruby2ruby'
   gem 'rubyntlm'
+  gem 'pry-byebug'
 end
 
 group :development, :test do
