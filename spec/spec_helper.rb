@@ -44,5 +44,6 @@ end
 
 RSpec.configure do |config|
   # some (optional) config here
+  config.disable_monkey_patching!
   config.mock_framework = :rspec
 end

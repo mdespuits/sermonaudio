@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SermonAudio do
+RSpec.describe SermonAudio do
 
   describe '#client' do
     it "should be a method" do

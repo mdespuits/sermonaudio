@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'savon/mock/spec_helper'
 
 module SermonAudio
-  describe Actions do
+  RSpec.describe Actions do
     include Savon::SpecHelper
 
     subject(:action) { Class.new.extend(Actions) }

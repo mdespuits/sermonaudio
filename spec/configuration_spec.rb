@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 module SermonAudio
-  describe Configuration do
+  RSpec.describe Configuration do
     subject {
       Class.new do
         extend(Configuration)
