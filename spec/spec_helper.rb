@@ -3,10 +3,13 @@ require 'bundler/setup'
 require 'simplecov'
 require 'coveralls'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
+formatters = [SimpleCov::Formatter::HTMLFormatter]
+
+if ENV["TRAVIS"]
+  formatters << Coveralls::SimpleCov::Formatter
+end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[*formatters]
 SimpleCov.start do
   add_filter "/spec/"
 end
