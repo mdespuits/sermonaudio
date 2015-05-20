@@ -91,7 +91,7 @@ GEM
     ruby_parser (3.6.2)
       sexp_processor (~> 4.1)
     rubyntlm (0.4.0)
-    safe_yaml (1.0.3)
+    safe_yaml (1.0.4)
     savon (2.11.0)
       akami (~> 1.2)
       builder (>= 2.1.2)
