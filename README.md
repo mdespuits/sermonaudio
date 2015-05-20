@@ -3,7 +3,7 @@
 The SermonAudio gem enables church ruby developers who need easily access sermons and information right from SermonAudio without having to configure any SOAP clients.
 
   - [![Quality](http://img.shields.io/codeclimate/github/mattdbridges/sermonaudio.svg?style=flat-square)](https://codeclimate.com/github/mattdbridges/sermonaudio)
-  - [![Coverage](http://img.shields.io/codeclimate/coverage/github/mattdbridges/sermonaudio.svg?style=flat-square)](https://codeclimate.com/github/mattdbridges/sermonaudio)
+  - [![Coverage](https://img.shields.io/coveralls/mattdbridges/sermonaudio/master.svg)](https://codeclimate.com/github/mattdbridges/sermonaudio)
   - [![Build](http://img.shields.io/travis-ci/mattdbridges/sermonaudio.svg?style=flat-square)](https://travis-ci.org/mattdbridges/sermonaudio)
   - [![Dependencies](http://img.shields.io/gemnasium/mattdbridges/sermonaudio.svg?style=flat-square)](https://gemnasium.com/mattdbridges/sermonaudio)
   - [![Downloads](http://img.shields.io/gem/dtv/sermonaudio.svg?style=flat-square)](https://rubygems.org/gems/sermonaudio)
