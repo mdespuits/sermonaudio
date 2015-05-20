@@ -8,7 +8,7 @@ rvm:
   - rbx-2
 env: SERMONAUDIO_MEMBER_ID=example SERMONAUDIO_PASSWORD=example
 before_install:
-  - gem install nokogiri -v 1.6.2.1 -- --use-system-libraries
+  - gem install nokogiri -v 1.6.6.2 -- --use-system-libraries
 bundler_args: --without development
 notifications:
   email: false
