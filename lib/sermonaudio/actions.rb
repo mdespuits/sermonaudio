@@ -13,8 +13,8 @@ module SermonAudio
     def convert_key(key)
       return key if key.is_a? String
       key.to_s.split('_')
-         .map { |v| v.downcase == 'id' ? v.upcase : v.capitalize }
-         .join
+        .map { |v| v.downcase == 'id' ? v.upcase : v.capitalize }
+        .join
     end
 
     def submit_sermon(info)
@@ -30,7 +30,7 @@ module SermonAudio
                    'MemberID' => SermonAudio.member_id,
                    'Password' => SermonAudio.password,
                    'SermonID' => sermon_id
-      )
+                  )
     end
 
     def favorite_sermons
@@ -105,7 +105,7 @@ module SermonAudio
       response = execute_call(action,
                               'MemberID' => SermonAudio.member_id,
                               'Password' => SermonAudio.password
-                 )
+                             )
       array_wrap(response[opts.fetch(:within)]).compact
     end
   end
