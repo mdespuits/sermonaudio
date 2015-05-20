@@ -4,13 +4,13 @@ source "http://rubygems.org"
 
 group :development do
   gem 'ruby2ruby'
-  gem 'rubyntlm'
-  gem 'pry-byebug'
+  gem 'pry-byebug', :platform => [:mri, :jruby]
 end
 
 group :development, :test do
   gem 'rake'
   gem 'pry'
+  gem 'rubyntlm'
   gem 'rubocop', require: false
 end
 
