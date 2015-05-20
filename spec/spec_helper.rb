@@ -43,6 +43,7 @@ VCR.configure do |c|
   c.hook_into :webmock # or :fakeweb
   c.configure_rspec_metadata!
   c.filter_sensitive_data('<SA_PASSWORD>') { ENV["SERMONAUDIO_PASSWORD"] }
+  c.filter_sensitive_data('<SA_API_KEY>') { ENV["SERMONAUDIO_API_KEY"] }
 end
 
 RSpec.configure do |config|
