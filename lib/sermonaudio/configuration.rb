@@ -1,8 +1,30 @@
 module SermonAudio
   module Configuration
-    class MissingConfiguration < KeyError; end
+    class MissingConfiguration < StandardError; end
 
-    attr_writer :member_id, :password
+    attr_writer :member_id, :password, :api_key
+
+    # Returns the specified SermonAudio.com Member ID.
+    #
+    # This can be defined explicitly via the writer method.
+    # If it is not specified, it will return the value from
+    # the `SERMONAUDIO_API_KEY` environment variable.
+    #
+    # Example:
+    #
+    #   SermonAudio.api_key
+    #   # => SermonAudio::Configuration::MissingConfiguration
+    #   ENV['SERMONAUDIO_API_KEY'] = 'example'
+    #   # => 'example'
+    #   SermonAudio.api_key
+    #   # => 'example'
+    #   SermonAudio.api_key = 'other'
+    #   # => 'other'
+    #   SermonAudio.api_key
+    #   # => 'other'
+    def api_key
+      defined_or_env :api_key
+    end
 
     # Returns the specified SermonAudio.com Member ID.
     #
