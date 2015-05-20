@@ -1,6 +1,7 @@
 AllCops:
-  Excludes:
-    - spec/**
+  Exclude:
+    - spec/**/*
+    - sermonaudio.gemspec
 
 AccessorMethodName:
   Enabled: false
