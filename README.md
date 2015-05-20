@@ -2,10 +2,17 @@
 
 The SermonAudio gem enables church ruby developers who need easily access sermons and information right from SermonAudio without having to configure any SOAP clients.
 
-[![Build Status](https://secure.travis-ci.org/mattdbridges/sermonaudio.png)](http://travis-ci.org/mattdbridges/sermonaudio)
-[![Code Climate](https://codeclimate.com/github/mattdbridges/sermonaudio.png)](https://codeclimate.com/github/mattdbridges/sermonaudio)
-[![Coverage Status](https://coveralls.io/repos/mattdbridges/sermonaudio/badge.png?branch=master)](https://coveralls.io/r/mattdbridges/sermonaudio?branch=master)
-[![Inline docs](http://inch-ci.org/github/mattdbridges/sermonaudio.png?branch=master)](http://inch-ci.org/github/mattdbridges/sermonaudio)
+  - [![Quality](http://img.shields.io/codeclimate/github/mattdbridges/sermonaudio.svg?style=flat-square)](https://codeclimate.com/github/mattdbridges/sermonaudio)
+  - [![Coverage](http://img.shields.io/codeclimate/coverage/github/mattdbridges/sermonaudio.svg?style=flat-square)](https://codeclimate.com/github/mattdbridges/sermonaudio)
+  - [![Build](http://img.shields.io/travis-ci/mattdbridges/sermonaudio.svg?style=flat-square)](https://travis-ci.org/mattdbridges/sermonaudio)
+  - [![Dependencies](http://img.shields.io/gemnasium/mattdbridges/sermonaudio.svg?style=flat-square)](https://gemnasium.com/mattdbridges/sermonaudio)
+  - [![Downloads](http://img.shields.io/gem/dtv/sermonaudio.svg?style=flat-square)](https://rubygems.org/gems/sermonaudio)
+  - [![Tags](http://img.shields.io/github/tag/mattdbridges/sermonaudio.svg?style=flat-square)](http://github.com/mattdbridges/sermonaudio/tags)
+  - [![Releases](http://img.shields.io/github/release/mattdbridges/sermonaudio.svg?style=flat-square)](http://github.com/mattdbridges/sermonaudio/releases)
+  - [![Issues](http://img.shields.io/github/issues/mattdbridges/sermonaudio.svg?style=flat-square)](http://github.com/mattdbridges/sermonaudio/issues)
+  - [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
+  - [![Version](http://img.shields.io/gem/v/sermonaudio.svg?style=flat-square)](https://rubygems.org/gems/sermonaudio)
+  - [![Inline docs](http://inch-ci.org/github/mattdbridges/sermonaudio.png?branch=master)](http://inch-ci.org/github/mattdbridges/sermonaudio)
 
 ## Installation
 
