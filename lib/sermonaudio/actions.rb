@@ -1,4 +1,5 @@
 require 'sermonaudio/configuration'
+require 'sermonaudio/utils'
 
 module SermonAudio
   # Actions that the SermonAudio module can call to
@@ -84,16 +85,12 @@ module SermonAudio
       response.body[:"#{name}_response"][:"#{name}_result"]
     end
 
-    def array_wrap(obj)
-      obj.is_a?(Hash) ? [obj] : Array(obj)
-    end
-
     def get_favorite(action, opts = {})
       response = execute_call(action,
                               'MemberID' => SermonAudio.member_id,
                               'Password' => SermonAudio.password
                              )
-      array_wrap(response[opts.fetch(:within)]).compact
+      Utils.array_wrap(response[opts.fetch(:within)]).compact
     end
   end
 end
