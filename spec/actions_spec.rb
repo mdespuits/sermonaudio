@@ -18,53 +18,6 @@ module SermonAudio
       Ukrainian Urdu Vietnamese Zulu
     ]
 
-    it 'should be able to convert keys properly' do
-      expectations = {
-        member_id: "MemberID",
-        password: "Password",
-        more_info_text: "MoreInfoText",
-        sermon_text: "SermonText",
-        "SermonText" => "SermonText"
-      }
-      expectations.each_pair do |original, result|
-        expect( action.convert_key(original) ).to eq result
-      end
-    end
-
-    it 'should convert Hash keys to correct strings' do
-      original = {
-        member_id: 'cbcelgin',
-        password: 'password',
-        title: 'Example Sermon',
-        short_title: 'Even Shorter',
-        sub_title: 'Series Name',
-        event_type: 'Sunday Service',
-        'DatePreached' => DateTime.new(2014, 7, 24),
-        speaker: 'Mitchell Jones',
-        bible_text: '1 Peter 2:21-25',
-        language: 'English',
-        keywords: 'bible jesus gospel',
-        'MoreInfoText' => 'This is more info about the sermon'
-      }
-
-      result = {
-        'MemberID' => 'cbcelgin',
-        'Password' => 'password',
-        'Title' => 'Example Sermon',
-        'ShortTitle' => 'Even Shorter',
-        'SubTitle' => 'Series Name',
-        'EventType' => 'Sunday Service',
-        'DatePreached' => DateTime.new(2014, 7, 24),
-        'Speaker' => 'Mitchell Jones',
-        'BibleText' => '1 Peter 2:21-25',
-        'Language' => 'English',
-        'Keywords' => 'bible jesus gospel',
-        'MoreInfoText' => 'This is more info about the sermon'
-      }
-
-      expect( action.convert_sermon_hash(original) ).to eq result
-    end
-
     describe 'stubbed expectations'  do
 
       before(:all) { savon.mock! }
