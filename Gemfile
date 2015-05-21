@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
 group :development do
   gem 'ruby2ruby'
-  gem 'pry-byebug', :platform => [:mri, :jruby]
+  gem 'pry-byebug', platform: [:mri, :jruby]
 end
 
 group :development, :test do
