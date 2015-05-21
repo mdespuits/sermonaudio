@@ -24,6 +24,59 @@ Then run bundle to install it:
 
     bundle install
 
+## Configuration
+
+You can configure SermonAudio in one of two ways.
+
+* Environment variables
+* Ruby
+
+### Environment Variables
+
+There are three environment variables SermonAudio responds to:
+
+* `SERMONAUDIO_MEMBER_ID`
+* `SERMONAUDIO_PASSWORD`
+* `SERMONAUDIO_API_KEY` (Note: Not yet used. Only for JSON endpoints)
+
+Example Usage:
+
+```ruby
+$ SERMONAUDIO_MEMBER_ID=example irb -r sermonaudio
+irb(main):001:0> SermonAudio.member_id
+=> "example"
+irb(main):002:0> SermonAudio.password
+=> nil
+irb(main):003:0> ENV["SERMONAUDIO_PASSWORD"] = "password"
+=> "password"
+irb(main):004:0> SermonAudio.password
+=> "password"
+```
+
+### Ruby
+
+Setting the equivalent values in Ruby will be overridden by their `ENV` values
+
+```ruby
+$ irb -r sermonaudio
+irb(main):001:0> SermonAudio.member_id
+=> nil
+irb(main):002:0> SermonAudio.password
+=> nil
+irb(main):003:0> SermonAudio.member_id = "example_member_id"
+=> "example_member_id"
+irb(main):004:0> SermonAudio.password = "password"
+=> "password"
+irb(main):005:0> SermonAudio.member_id
+=> "example_member_id"
+irb(main):006:0> SermonAudio.password
+=> "password"
+irb(main):003:0> ENV["SERMONAUDIO_PASSWORD"] = "password2"
+=> "password2"
+irb(main):006:0> SermonAudio.password
+=> "password2"
+```
+
 ## General Use
 
 ### `#submit_sermon`
