@@ -11,6 +11,6 @@ before_install:
   - gem install nokogiri -v 1.6.6.2 -- --use-system-libraries
 bundler_args: --without development
 cache: bundler
-script: bundle exec rubocop && bundle exec rspec
+script: bundle exec rspec
 notifications:
   email: false
