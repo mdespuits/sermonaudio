@@ -49,9 +49,9 @@ module SermonAudio
           "SERMONAUDIO_PASSWORD" => nil,
           "SERMONAUDIO_API_KEY" => nil,
          ) do
-        expect { config.member_id }.to raise_error Configuration::MissingConfiguration
-        expect { config.password }.to raise_error Configuration::MissingConfiguration
-        expect { config.api_key }.to raise_error Configuration::MissingConfiguration
+        expect { config.member_id }.to raise_error Configuration::MissingConfiguration, /configuration\.member_id/
+        expect { config.password }.to raise_error Configuration::MissingConfiguration, /configuration\.password/
+        expect { config.api_key }.to raise_error Configuration::MissingConfiguration, /configuration\.api_key/
       end
     end
   end
