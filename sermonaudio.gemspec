@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_dependency "savon", "~> 2.11.0"
-  s.add_dependency "nokogiri", "1.6.6.2"
+  s.add_dependency "nokogiri", "1.6.7.2"
 end
