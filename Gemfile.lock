@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sermonaudio (0.1.0)
+    sermonaudio (0.1.1)
       nokogiri (= 1.6.7.2)
       savon (~> 2.11.0)
 
